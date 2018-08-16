@@ -1,0 +1,5 @@
+# convert name of the file to aws_vars.csv and fill with real data
+aws_access_key_id,someone
+aws_secret_access_key,something
+database_url,somewhere
+secret_key,itsaseekrit

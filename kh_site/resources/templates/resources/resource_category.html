@@ -1,0 +1,10 @@
+<div class="container divider">
+    <h4>{{ category.name }}</h4>
+    {% for book in category.books.all %}
+    <div class="col-md-3 book-container">
+        <div class="book">
+            <a target="_blank" href="{{ book.link }}"><img class="book-cover" src="{{ book.cover_image.url }}"/></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

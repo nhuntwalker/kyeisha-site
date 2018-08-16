@@ -1,0 +1,101 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block overlay %}
+    {% include 'base/loading_overlay.html' %}
+{% endblock %}
+{% block content %}
+  <section id="banner">
+    <img src="{% static 'imgs/home-page-banner.png' %}" />
+  </section>
+  <div class="container divider top-con" id="home-top">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="col-md-12">
+          <h2 class="">Trauma is a Liar</h2>
+          <p class="top-20 text-center">
+            You are not broken.<br/>
+            You do not have a "pathology".<br/>
+            <strong>You are not unworthy of love and the life you truly want.</strong><br/>
+            You just haven't gained access to the power that you ALREADY have.
+          </p>
+          <p>
+            Repeatedly going through deeply distressing experiences&mdash;such as domestic violence, racism, childhood, and/or sexual abuse&mdash;will create LIES that we internalize and build a life around.
+          </p>
+          <p>
+            I have the immense honor of helping you free yourself from this prison of deception. Only then can you step into your power, and <strong>live an intentional life filled with purpose and PASSION</strong> without suffering through negative self talk, doubt, worry, and hypervigilance.
+          </p>
+          <h2>Seize the Opportunity for Transformation</h2>
+          <p>
+            No matter what need brought you to this site today, please know that powerful change comes when we transform our thoughts, emotions, and beliefs to serve us instead of being at their mercy.
+          </p>
+          <p>
+            Let's start the journey, whether you live in Seattle or not!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="home-squares">
+    <div class="col-md-6 service-container s1">
+      <a href="{% url 'therapy' %}">
+        <div class='service-img'>
+          <img src="{% static 'imgs/therapy-tile.jpg' %}">
+        </div>
+        <div class="service">
+          <div class="service-inner">
+            <h3 class="text-center">Therapy</h3>
+            <h4 class="text-center subtitle">Heal From Trauma &amp; Reclaim Your Power</h4>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-6 service-container">
+      <a href="{% url 'group_counseling' %}">
+        <div class='service-img s2'>
+          <img src="{% static 'imgs/group-counseling-tile.jpg' %}">
+        </div>
+        <div class="service">
+          <div class="service-inner">
+            <h3 class="text-center">Group Counseling</h3>
+            <h4 class="text-center subtitle">Redesign Your Life with Community</h4>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-6 service-container">
+      <a href="{% url 'speaking' %}">
+        <div class='service-img s3'>
+          <img src="{% static 'imgs/speaking-tile.jpg' %}">
+        </div>
+        <div class="service">
+          <div class="service-inner">
+            <h3 class="text-center">Speaking</h3>
+            <h4 class="text-center subtitle">Presentations to Inspire Change</h4>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-6 service-container">
+      <a href="{% url 'healing_healers' %}">
+        <div class="service-img">
+          <img src="{% static 'imgs/healers-tile.jpg' %}">
+        </div>
+        <div class="service">
+          <div class="service-inner">
+            <h3 class="text-center">Healing the Healers</h3>
+            <h4 class="text-center subtitle">Workshops &amp; Coaching Designed for Healers who Serve Trauma Survivors</h4>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+{% endblock %}
+{% block script %}
+  <script>
+    setTimeout(_ => {
+      $('#loading-overlay').fadeOut()
+    }, 1800)
+    $('#navbar .navbar-nav li').removeClass("active");
+    $('#home-link').addClass("active");
+  </script>
+{% endblock %}

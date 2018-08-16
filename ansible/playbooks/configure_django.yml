@@ -1,0 +1,51 @@
+---
+- hosts: deployment
+  become: yes
+  become_method: sudo
+  vars:
+    - ansible_python_interpreter: /usr/bin/python3.6
+  tasks:
+    - name: Clone the repository down
+      git: 
+        clone=yes
+        repo=https://github.com/nadiabahrami/kh-project.git
+        dest=/home/ubuntu/kh-project
+        version=revisions-2018
+
+    - name: Create a virtual environment in the project directory
+      command: python3.6 -m venv {{ env_path }}
+
+    - name: Set up new environment file
+      template:
+        src=../templates/env_template
+        dest={{ env_path }}/bin/activate
+
+    - name: Install gunicorn to the virtual environment
+      pip:
+        virtualenv={{ env_path }}
+        name=gunicorn
+
+    - name: Install project requirements to the virtual environment
+      pip:
+        requirements={{ env_path }}/../requirements.txt
+        virtualenv={{ env_path }}
+
+    - name: Apply any new migrations
+      django_manage:
+        virtualenv={{ env_path }}
+        app_path={{ env_path }}/../kh_site/
+        command=migrate
+      environment:
+        DATABASE_URL: "{{ lookup('csvfile', 'database_url file=../vars/aws_vars.csv delimiter=, col=1') }}"
+        SECRET_KEY: "{{ lookup('csvfile', 'secret_key file=../vars/aws_vars.csv delimiter=, col=1') }}"
+
+    - name: Collect static files into S3
+      django_manage:
+        virtualenv={{ env_path }}
+        app_path={{ env_path }}/../kh_site/
+        command=collectstatic
+      environment:
+        DATABASE_URL: "{{ lookup('csvfile', 'database_url file=../vars/aws_vars.csv delimiter=, col=1') }}"
+        AWS_ACCESS_KEY_ID: "{{ lookup('csvfile', 'aws_access_key_id file=../vars/aws_vars.csv delimiter=, col=1') }}"
+        AWS_SECRET_ACCESS_KEY: "{{ lookup('csvfile', 'aws_secret_access_key file=../vars/aws_vars.csv delimiter=, col=1') }}"
+        SECRET_KEY: "{{ lookup('csvfile', 'secret_key file=../vars/aws_vars.csv delimiter=, col=1') }}"

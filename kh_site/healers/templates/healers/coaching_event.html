@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<section class="main" style="background: url('{% static 'imgs/g2b.jpg' %}') no-repeat; background-size:100%; background-position:right;">
+    <div class="container">
+      <h1 class="text-center">Group Coaching Details</h1>
+    </div>
+</section>
+<div class="container divider top-con">
+  <h2>Current Group</h2>
+  <p><strong>Start date:</strong> March 7, 2018</p>
+  <p><strong>End date:</strong> April 25, 2018</p>
+  <p><strong>Meets on:</strong> Wednesdays</p>
+  <p><strong>Location:</strong> <a href="https://www.google.com/maps/place/600+N+65th+St,+Seattle,+WA+98103" target="_blank">600 North 65th street, Seattle, WA</a></p>
+  <a href="#"><button>Join the Group</button></a>
+  <section>
+    <h3>Group Logistics</h3>
+    <ul>
+      <li>8 group sessions total</li>
+      <li>Weekly “office hours” (TBD in the new year) over the phone where I’m available for troubleshooting, Q&A, and check-ins</li>
+      <li>Formation of daily self-care practice-exercises (Monday through Friday) to help you stay focused, build momentum, and move forward throughout the week</li>
+      <li>Tailored invitations to work on between sessions to help you get stronger and more free</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Session Outline</h3>
+    <p>Each week we will review certain special topics while still leaving room to meet the various needs of the group.</p>
+    <ul>
+      <li>Session 1 &amp; 2 - Liberate our minds by understanding and REMOVING the negative effects of historical and individual trauma.</li>
+
+      <li>Session 3 &amp; 4 Understand your current self-care practices and design ones that support you in developing you ideal self.</li>
+
+      <li>Session 5 &amp; 6  Clarify your values and beliefs (including the limiting ones) in order to begin living an intentional, joy filled life.</li>
+
+      <li>Session 7 &amp; 8 - Begin designing life goals in order to crate clarity, purpose and restore passion.</li>
+    </ul>
+  </section>
+  <div class="alert">
+    <p>The Investment is $79 Per Session, Plus a Testimonial and Feedback to Me at the End About What Worked Best and Your Suggestions for Improvement.</p>
+  </div>
+</div>
+  <script>
+      $('#navbar .navbar-nav li').removeClass("active");
+      $('#service-link').addClass("active");
+  </script>
+{% endblock %}

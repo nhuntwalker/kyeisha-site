@@ -1,0 +1,33 @@
+---
+- hosts: deployment
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Register the old default file
+      stat: path=/etc/nginx/sites-available/default.old
+      register: default_stat
+
+    - name: Rename old default file
+      command: mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.old
+      when: not default_stat.stat.exists
+
+    - name: Create a new default file for nginx
+      template:
+        src=../templates/simple_nginx_config 
+        dest=/etc/nginx/sites-available/default
+
+    - name: Restart the nginx service
+      service:
+        name=nginx
+        state=restarted
+
+    - name: Copy over system.d config
+      template:
+        src=../templates/systemd_config
+        dest=/etc/systemd/system/khsite.service
+
+    - name: Start up the site's service
+      systemd:
+        name=khsite
+        state=restarted
+        daemon_reload=yes

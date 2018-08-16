@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<section id="banner">
+  <img src="{% static 'imgs/blog-main-crop.png' %}">
+  <h1 class="text-center">Blog</h1>
+</section>
+<div class="container divider top-con" id="blog-articles">
+  {% if user.is_authenticated%}
+    <a href="/blog/add/">Add a Post</a>
+  {% endif %}
+  {% for article in articles %}
+    {% include 'blog/blog_item.html' %}
+  {% endfor %}
+</div>
+<div class="container page-control">
+  {% if page_obj.has_previous %}
+    <a href="{% url 'blog' %}?page={{ page_obj.previous_page_number}}" class="blog-btn" id="prev-page">-- Previous Page --</a>
+  {% endif %}
+  {% if page_obj.has_next %}
+    <a href="{% url 'blog' %}?page={{ page_obj.next_page_number}}" class="blog-btn" id="next-page">-- Next Page --</a>
+  {% endif %}
+</div>
+<script>
+  $('#navbar .navbar-nav li').removeClass("active");
+  $('#blog-link').addClass("active");
+</script>
+{% endblock %}

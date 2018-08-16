@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo:700|Flamenco|News+Cycle:700|Open+Sans:300,400|Prompt:500|Rosario:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400|Josefin+Sans:400,700" rel="stylesheet">
+    <link rel='shortcut icon' href="{% static 'imgs/favicon.ico' %}" type='image/x-icon'/ >
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/4d0cb8d848.js"></script>
+    <title>Kyeisha Hodge</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}"/>
+  </head>
+  <body>
+    {% block overlay %}{% endblock %}
+    {% include 'base/nav.html' %}
+    {% block content %}{% endblock %}
+    {% include 'base/footer.html' %}
+    <script src="{% static 'js/menu-ctrl.js' %}" type="text/javascript"></script>
+    {% block script %}{% endblock %}
+  </body>
+</html>

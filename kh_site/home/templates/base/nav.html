@@ -1,0 +1,82 @@
+{% load static %}
+<nav class="navbar navbar-fixed-top">
+  <div id="background"></div>
+  <div id="labels">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <div id="nav-branding">
+          <div id="navbar-logo">
+            <img src="{% static 'imgs/khsig-white.png' %}"/>
+            <p></p>
+          </div>
+          <section id="main-description">
+            <p>Kyeisha Hodge</p>
+            <p>Psychotherapist</p>
+          </section>
+        </div>
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active" id="home-link"><a class="main-opt" href="{% url 'home'%}">Home</a></li>
+        <li id="about-link"><a class="main-opt" href="{% url 'about'%}">About</a></li>
+        <li id="service-link" class="dropdown">
+          <a  class="main-opt dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+          <ul class="dropdown-menu">
+            <li><a id="drop-opt" href="{% url 'therapy' %}">Therapy</a></li>
+            <li><a id="drop-opt" href="{% url 'speaking' %}">Speaking</a></li>
+            <li><a id="drop-opt" href="{% url 'group_counseling' %}">Group Counseling</a></li>
+            <li><a id="drop-opt" href="{% url 'healing_healers' %}">Healing the Healers</a></li>
+          </ul>
+        </li>
+        <li id="blog-link"><a class="main-opt" href="{% url 'blog'%}">Blog</a></li>
+        <li id="contact-link"><a class="main-opt" href="{% url 'contact'%}">Contact</a></li>
+        <li id="resc-link"><a class="main-opt" href="{% url 'resources'%}">Resources</a></li>
+      {% if user.is_authenticated %}
+        <li><a class="main-opt" href="{% url 'auth_logout' %}">Logout</a></li>  
+      {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="nav-mobile">
+  <ul class="nav-list">
+    <a class="mobile-item" href="{% url 'home'%}">
+      <li id="home-mobile">Home</li>
+    </a>
+    <a class="mobile-item" href="{% url 'about'%}">
+      <li id="about-mobile">About</li>
+    </a>
+    <li id="service-mobile" class="nav-expanded">
+      <span class="mobile-item">Services</span>
+      <ul class="mobile-submenu">
+        <a class="mobile-item" href="{% url 'therapy' %}">
+          <li>Therapy</li>
+        </a>
+        <a class="mobile-item" href="{% url 'speaking' %}">
+          <li>Speaking</li>
+        </a>
+        <a class="mobile-item" href="{% url 'group_counseling' %}">
+          <li>Group Counseling</li>
+        </a>
+        <a class="mobile-item" href="{% url 'healing_healers' %}">
+          <li>Healing the Healers</li>
+        </a>
+      </ul>
+    </li>
+    <a class="mobile-item" href="{% url 'blog'%}">
+      <li id="blog-mobile">Blog</li>
+    </a>
+    <a class="mobile-item" href="{% url 'contact'%}">
+      <li id="contact-mobile">Contact</li>
+    </a>
+    <a class="mobile-item" href="{% url 'resources'%}">
+      <li id="resc-mobile">Resources</li>
+    </a>
+</div>

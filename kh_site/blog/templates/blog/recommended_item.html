@@ -1,0 +1,18 @@
+{% load blog_functions %}
+<div class="col-md-6 recommended">
+  <a href="{% url 'blog_detail_slug' slug=article.slug %}" class="title-link">
+    <div class="recommended-title">
+        <h4>
+            {% if article.short_title %}
+                {{ article.short_title }}
+            {% else %}
+                {{ article.title }}
+            {% endif %}
+        </h4>
+    </div>
+</a>
+  <section class="blog-date-time">
+    <p>{{ article.date_published|date:'F d, Y' }}</p><span class="text-divider"> | </span><p>Reading Time: {{ article.content|reading_time }}</p>
+  </section>
+  <a href="{% url 'blog_detail_slug' slug=article.slug %}" class="blog-btn">&mdash; Read More &mdash;</a>
+</div>

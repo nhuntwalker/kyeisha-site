@@ -1,0 +1,23 @@
+[Unit]
+Description=Job that runs gunicorn for Kyeishas site
+After=network.target
+
+[Service]
+Restart=on-failure
+User=nobody
+Group=nogroup
+
+Environment=ALLOWED_HOSTS={{ server_dns }}
+Environment=AWS_ACCESS_KEY_ID={{ lookup('csvfile', 'aws_access_key_id file=../vars/aws_vars.csv delimiter=, col=1') }}
+Environment=AWS_SECRET_ACCESS_KEY={{ lookup('csvfile', 'aws_secret_access_key file=../vars/aws_vars.csv delimiter=, col=1') }}
+Environment=DATABASE_URL={{ lookup('csvfile', 'database_url file=../vars/aws_vars.csv delimiter=, col=1') }}
+Environment=DEBUG=
+Environment=GOOGLE_KEY={{ lookup('csvfile', 'google_key file=../vars/aws_vars.csv delimiter=, col=1') }}
+Environment=SECRET_KEY={{ lookup('csvfile', 'secret_key file=../vars/aws_vars.csv delimiter=, col=1') }}
+
+WorkingDirectory=/home/ubuntu/kh-project/kh_site
+
+ExecStart=/home/ubuntu/kh-project/ENV/bin/gunicorn -b :8080 kh_site.wsgi
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,70 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load blog_functions %}
+{% block content %}
+<section id="banner">
+  <img src="{% static 'imgs/blog-main-crop.png' %}">
+  <h1 class="text-center">Blog</h1>
+</section>
+<div id="blog-body container">
+  <div class="container divider b2-top" id="blog-article">
+    {% if user.is_authenticated%}
+      <a href="{% url 'add_bpost' %}">Add a Post</a>
+    {% endif %}
+    <div class="col-md-12">
+      <h2 class="article-title">{{ article.title }}</h2>
+      {% if user.is_authenticated%}
+        <a href="{% url 'edit_bpost' pk=article.pk %}">Edit Post</a>
+        <a href="{% url 'delete_bpost' pk=article.pk %}">Delete Post</a>
+      {% endif %}
+      <section class="blog-date-time">
+        <p>{{ article.date_published|date:'F d, Y' }}</p><span class="text-divider"> | </span><p>Reading Time: {{ article.content|reading_time }}</p>
+      </section>
+      <section id="share-btn">
+        <p>Share this post &raquo;</p>
+        <ul id="share-list">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://{{ request.get_host }}{% url 'blog_detail_pk' pk=article.pk %}" target="_blank">
+            <li class="fb-share share-link">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </li>
+          </a>
+          <a href="https://twitter.com/intent/tweet?text=Read {{ article.title }} at {{ request.get_host }}{% url 'blog_detail_pk' pk=article.pk %}" target="_blank">
+            <li class="twitter-share share-link">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </li>
+          </a>
+          <a href="https://plus.google.com/share?url=http://{{ request.get_host }}{% url 'blog_detail_pk' pk=article.pk %}" target="_blank" class="Share with Google plus">
+            <li class="google-share share-link">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </li>
+          </a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://{{ request.get_host }}{% url 'blog_detail_pk' pk=article.pk %}&title={{ article.title }}&summary={{ article.excerpt }}" target="_blank" title="Share with LinkedIn">
+            <li class="linkedin-share share-link">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </li>
+          </a>
+        </ul>
+      </section>
+      <section class="top-20">
+        {{ article.content|safe }}
+      </section>
+      <div id="article-signature" class="col-md-3">
+        <img src="{% static 'imgs/khblacklogo-orange.png' %}" />
+        <p class="text-center">Kyeisha Hodge, LMHC</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="recommended-articles">
+  <div class="container ">
+    <h3>Recommended Articles</h3>
+    {% for article in recommended %}
+      {% include 'blog/recommended_item.html' %}
+    {% endfor %}
+  </div>
+</div>
+<script>
+  $('#navbar .navbar-nav li').removeClass("active");
+  $('#blog-link').addClass("active");
+</script>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<section id="banner">
+  <img src="{% static 'imgs/speaking-full.jpg' %}" />
+  <h1 class="text-center">Speaking</h1>
+</section>
+<div class="container top-con">
+    <section class="container">
+        <h3 class="text-center">Presentations that Transform</h3>
+        <p class="top-20">
+            I offer talks that motivate, uncover bold truths, and facilitate restoration within individuals and organizations.
+            My talks offer the opportunity to educate staff on the various topics concerning Mental Health and self development.
+            In the era of Trump, #metoo, and #blacklivesmatter people have begun to crave conversations about abuse and healing that matter.
+            However, they are unsure of how to facilitate these conversations.
+            That's where my talks and workshops step in to fill that void.
+        </p>
+        <p>
+            I discuss the effects that domestic violence, sexual assault, racism, and sexism have on an individual’s mental health, as well as how to overcome them personally and professionally.
+        </p>
+        <p>
+            I have been honored to hold workshops and talks addressing these topics at companies such as the YWCA, Seattle Therapy Alliance, Rainier Valley Corps, and Wonder of Women Inc.
+        </p>
+        <p>
+            Below are my most requested talks and workshops.
+            Click on each item for details about the specific workshop:
+        </p>
+    </section>
+    {% if presentations %}
+    <section class="container">
+        {% for pair in presentation_pairs %}
+            {% include 'speaking/presentation_row.html' %}
+        {% endfor %}
+        {% if orphan %}
+        <div class="container spacer">
+            <div class="col-md-4 col-md-offset-1 speaking-item" data="presentation-{{ orphan.pk }}">
+                <img class="talk-dot" src="{{ orphan.image.url }}"/>
+            </div>
+        </div>
+        {% endif %}
+    </section>
+    {% endif %}
+</div>
+<div id="speaking-overlay">
+    {% include 'speaking/presentation_detail.html' %}
+</div>
+{% endblock %}
+{% block script %}
+<script>
+    $('#navbar .navbar-nav li').removeClass("active");
+    $('#service-link').addClass("active");
+
+    $('.speaking-item').on('click', function (event) {
+        let pk = $(this).attr('data').split('-')[1]
+        $.get(`/services/speaking/api/detail/${pk}`, response => {
+            $('#presentation-title h4').html(response.title)
+            $('#presentation-content').html(response.details)
+            $('#speaking-overlay').show()
+            $('body').addClass('noscroll')
+        })
+    })
+    let closeOverlay = _ => {
+        $('#speaking-overlay').hide()
+        $('body').removeClass('noscroll')
+    }
+    $('.close-overlay').on('click', closeOverlay)
+    $('body').on('keyup', function (event) {
+        if (event.keyCode === 27) {
+            closeOverlay()
+        }
+    })
+</script>
+{% endblock %}

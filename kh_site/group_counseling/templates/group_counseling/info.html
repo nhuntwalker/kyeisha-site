@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<section id="banner">
+  <img src="{% static 'imgs/group-main-crop.png' %}">
+  <h1 class="text-center">Seattle Support Group for Abuse Survivors</h1>
+</section>
+<div class="container top-con bottom-40">
+  <section class="container text-center">
+    <h2 class="">Learn to Thrive with Community!</h2>
+    <p class="p-large">Release old patterns and fears.<br/>Gain the empowerment, clarity, and courage necessary to pursue your ideal life.</p>
+  </section>
+  <section class="container">
+    <h3 class="text-center">Who is the Group For?</h3>
+    <p class="top-20">This group is for ambitious women who have been impacted by negative relationships including domestic violence and childhood abuse. They lead productive lives but still feel something is missing.</p>
+    <p>These women are committed to their personal development and are searching for tools and strategies to design their lives to take things to the next level.</p>
+    <p>They are tired of negative emotions, toxic relationships, aimlessness, and self-doubt creeping into their lives.</p>
+    <p>This group is for women who are willing to risk the discomfort and vulnerability associated with REAL transformation and are ready to step into their greatness.</p>
+  </section>
+  <section class="container">
+    <h3 class="text-center">Outcomes and Benefits</h3>
+    <p class="top-20">The major undertaking of this group is to offer support, tools and encouragement so that members can:</p>
+    <ul class="listing">
+      <li>Eliminate the internalized lies of oppression</li>
+      <li>Learn/Practice Self-Love (including creating positive self-talk)</li>
+      <li>Begin to design a life where thriving is a standard</li>
+    </ul>
+    <p>Each group session will explore a topic/theme associated with the above goals, provide check-in space for members, and flexibility to go with the group's flow.</p>
+    <p>Each member will be asked to be vocal, to be fully present, and to both share and take up space.</p>
+    <p>As with everything I offer this will have a social justice lens that will consider the impact that the systems you belong to have on your internal world.</p>
+  </section>
+  <a href="{% url 'coaching_event' %}" id="group-info-btn">
+    <div>
+      <p>Click here for more details and current group start date</p>
+    </div>
+  </a>
+</div>
+  <script>
+      $('#navbar .navbar-nav li').removeClass("active");
+      $('#service-link').addClass("active");
+  </script>
+{% endblock %}

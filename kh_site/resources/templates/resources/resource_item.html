@@ -1,0 +1,14 @@
+<div class="col-md-12 divider">
+    <h4>{{ resource.title }}</h4>
+    <div class="resource-inner">
+        {% if resource.short_description %}
+        <p>{{ resource.short_description }}</p>
+        {% endif %}
+        {% if resource.link %}
+        <p><a href="{{ resource.link }}" target="_blank">{{ resource.link }}</a></p>
+        {% endif %}
+        {% if resource.phone_number %}
+        <p><a href="tel:{{ resource.phone_number }}">{{ resource.phone_number }}</a></p>
+        {% endif %}
+    </div>
+</div>
