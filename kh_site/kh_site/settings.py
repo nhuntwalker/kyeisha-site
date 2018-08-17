@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'blog',
     'healers',
     'speaking',
-    'group_counseling',
+    'group_coaching',
     'resources',
     'redactor',
     'rest_framework',
