@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
   <section id="banner">
-    <img src="{% static 'imgs/not-found-crop.png' %}" />
+    <img src="{% static 'imgs/not-found-full.png' %}" />
     <h1 class="text-center">Not Here</h1>
   </section>
   <div class="container top-con">
@@ -13,35 +13,35 @@
   </div>
   <div class="container" id="home-squares">
     <div class="col-md-6 service-container s1">
-      <a href="{% url 'counseling' %}">
+      <a href="{% url 'therapy' %}">
         <div class='service-img'>
-          <img src="{% static 'imgs/forest-road-in-the-fall.jpg' %}">
+          <img src="{% static 'imgs/therapy-tile.jpg' %}">
         </div>
         <div class="service">
           <div class="service-inner">
-            <h3 class="text-center">Counseling</h3>
+            <h3 class="text-center">Therapy</h3>
             <h4 class="text-center subtitle">Heal From Trauma &amp; Reclaim Your Power</h4>
           </div>
         </div>
       </a>
     </div>
     <div class="col-md-6 service-container">
-      <a href="{% url 'coaching' %}">
+      <a href="{% url 'group_coaching' %}">
         <div class='service-img s2'>
-          <img src="{% static 'imgs/together.gif' %}">
+          <img src="{% static 'imgs/group-counseling-tile.jpg' %}">
         </div>
         <div class="service">
           <div class="service-inner">
-            <h3 class="text-center">Group Coaching</h3>
+            <h3 class="text-center">Group Counseling</h3>
             <h4 class="text-center subtitle">Redesign Your Life with Community</h4>
           </div>
         </div>
       </a>
     </div>
     <div class="col-md-6 service-container">
-      <a href="{% url 'presentation_list' %}">
+      <a href="{% url 'speaking' %}">
         <div class='service-img s3'>
-          <img src="{% static 'imgs/b1.jpg' %}">
+          <img src="{% static 'imgs/speaking-tile.jpg' %}">
         </div>
         <div class="service">
           <div class="service-inner">
@@ -53,9 +53,8 @@
     </div>
     <div class="col-md-6 service-container">
       <a href="{% url 'healing_healers' %}">
-        <!-- <div class='service-img s4'> -->
         <div class="service-img">
-          <img src="{% static 'imgs/greenlake.jpg' %}">
+          <img src="{% static 'imgs/healers-tile.jpg' %}">
         </div>
         <div class="service">
           <div class="service-inner">
@@ -66,8 +65,11 @@
       </a>
     </div>
   </div>
+{% endblock %}
+
+{% block script %}
   <script>
-      $('#navbar .navbar-nav .active').removeClass("active");
-      $('#home-link').addClass("active");
+    $('#navbar .navbar-nav .active').removeClass("active");
+    $('#home-link').addClass("active");
   </script>
 {% endblock %}

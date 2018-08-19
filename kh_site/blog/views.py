@@ -33,7 +33,7 @@ class BlogDetail(DetailView):
     model = Article
     queryset = Article.published.all()
     context_object_name = 'article'
-    template_name = 'blog/detail_article.html'
+    template_name = 'blog/blog_detail.html'
     query_pk_and_slug = True
 
     def get_context_data(self, **kwargs):

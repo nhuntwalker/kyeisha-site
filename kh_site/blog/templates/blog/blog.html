@@ -2,13 +2,10 @@
 {% load static %}
 {% block content %}
 <section id="banner">
-  <img src="{% static 'imgs/blog-main-crop.png' %}">
+  <img src="{% static 'imgs/blog-full.png' %}">
   <h1 class="text-center">Blog</h1>
 </section>
-<div class="container divider top-con" id="blog-articles">
-  {% if user.is_authenticated%}
-    <a href="/blog/add/">Add a Post</a>
-  {% endif %}
+<div class="container top-con" id="blog-articles">
   {% for article in articles %}
     {% include 'blog/blog_item.html' %}
   {% endfor %}

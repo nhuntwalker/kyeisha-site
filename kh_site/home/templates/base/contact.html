@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <section id="banner">
-  <img src="{% static 'imgs/contact-main-crop.png' %}">
+  <img src="{% static 'imgs/contact-full.jpg' %}">
   <h1 class="text-center">Contact</h1>
 </section>
 <div class="container" id="contact-body">
@@ -17,51 +17,36 @@
             <p id="find-me"><a href="https://www.google.com/maps/place/Introspective+Counseling+-+Kyeisha+Hodge/@47.6517406,-122.353203,17z/data=!3m1!4b1!4m5!3m4!1s0x54901500aacc2e7f:0x156ca010744175d5!8m2!3d47.6517406!4d-122.3510143" target="_blank">Find me! <i class="fa fa-globe" aria-hidden="true"></i></a></p>
         </section>
         <h4>Parking:</h4>
-        <p>Paid street parking is available 8am to 8pm on the streets surrounding the office. There is also a lot behind the building that is $3.00 + tax for 2hrs.</p>
+        <p>Paid street parking is available 8am to 8pm on the street surrounding the Fremont Office.</p>
     </div>
     <div class="col-md-8 col-sm-offset-1">
-        <p class="contact-p">I offer services in a warm and comfortable environment conveniently located in Seattle's Fremont neighborhood.  Please contact me directly to inquire about available time slots.</p>
-        <p class="contact-p">Call <a href="tel:+12057750502">(205) 775-0502</a> or email me at <a href="mailto:kyeisha.hodge@gmail.com​?subject=Services Request">kyeisha.hodge@gmail.com​</a></p>
+        <p class="contact-p">I offer services in a warm and comfortable environment conveniently located in Seattle's Fremont neighborhood. My office is in the Seattle Space Building</p>
+        <p class="contact-p">Please contact me directly to inquire about available time slots.</p>
+        <p class="contact-p">Call <a href="tel:+12057750502">(205) 775-0502</a> or email me at <a href="mailto:kyeisha@kyeishahodge.com?subject=Services Request">kyeisha@kyeishahodge.com</a></p>
         <div id="map"></div>
     </div>
 </div>
+{% endblock %}
+{% block script %}
 <script>
     $('#navbar .navbar-nav li').removeClass("active");
     $('#contact-link').addClass("active");
 </script>
 <script>
     function initMap() {
-      var myLatLng = {lat: 47.6514919, lng: -122.3510309};
+        var myLatLng = { lat: 47.6514919, lng: -122.3510309 };
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: myLatLng
-      });
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: myLatLng
+        });
 
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: "Kyeisha Hodge's Office"
-      });
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: "Kyeisha Hodge's Office"
+        });
     }
 </script>
-<script>
-    // $(document).ready(function () {
-
-    //     // you want to enable the pointer events only on click;
-
-    //     $('#map').addClass('scrolloff'); // set the pointer events to none on doc ready
-    //     $('.main').on('click', function () {
-    //         $('#map').removeClass('scrolloff'); // set the pointer events true on click
-    //     });
-
-    //     // you want to disable pointer events when the mouse leave the canvas area;
-
-    //     $("#map").mouseleave(function () {
-    //         $('#map').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
-    //     });
-    // });
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_KEY }}&callback=initMap"
-async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_KEY }}&callback=initMap" async defer></script>
 {% endblock %}
