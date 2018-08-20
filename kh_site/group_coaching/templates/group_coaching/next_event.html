@@ -12,6 +12,7 @@
     <article id="group-event-info">
       <p><strong>Start date:</strong> {{ event.start_date }}</p>
       <p><strong>End date:</strong> {{ event.end_date }}</p>
+      <p><strong>Day(s) of the Week:</strong> {{ event.meeting_days }}</p>
       <p><strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }} PST</p>
       <p><strong>Location:</strong> <a href="https://www.google.com/maps/place/{{ event.location | format_location }}" target="_blank">{{ event.location }} <i class="fa fa-globe" aria-hidden="true"></i></a></p>
       <div class="text-center top-20">
@@ -21,7 +22,7 @@
       </div>
     </article>
   </section>
-  <section class="containe dividerr">
+  <section class="container divider listing" id="logistics">
     <h3 class="text-center bottom-20">
       Group Logistics
     </h3>
@@ -31,11 +32,11 @@
     <h3 class="text-center">
       Session Outline
     </h3>
-    <p class="top-20 bottom-40 narrowed-text">
+    <p class="top-20 bottom-40">
       Each week we will review certain special topics while still leaving room to meet the various needs of the group.
       Each session will include time to process day to day concerns, goal setting, accountability check-ins and sharing breakthroughs.
     </p>
-    <article class="top-40" id="session-outline">
+    <article class="top-40 listing" id="session-outline">
       {{ event.outline | safe }}
     </article>
   </section>
@@ -44,20 +45,20 @@
       Financial Investment
     </h3>
     <p>
-      The investment is $79 per session, plus a testimonial and feedback to me at the end about what worked best and your suggestions for improvement.
+      The investment is ${{ event.cost }} per session, plus a testimonial and feedback to me at the end about what worked best and your suggestions for improvement.
     </p>
     <p>Payment options include:</p>
-    <ul>
+    <ul id="cost" class="listing">
       <li>
-        <p>Payments of $79 set up at the same time weekly with credit/debit card</p>
+        Payments of ${{ event.cost }} set up at the same time weekly with credit/debit card
       </li>
       <li>
-        <p>A one time payment of $553 (save $79)</p>
+        A one time payment of ${{ event.cost | lump_discount }} (save ${{ event.cost }})
       </li>
     </ul>
   </section>
-  <section class="container divider">
-    <h3>Next Steps</h3>
+  <section class="container">
+    <h3 class="text-center">Next Steps</h3>
     <p>
       Please <a href="{{ event.external_link }}">click here to sign up</a> for an upcoming group.
       Please be advised that you will have to fill out paperwork and have a 30-mins phone consultation to determine best fit.
@@ -70,4 +71,4 @@
   $('#navbar .navbar-nav li').removeClass("active");
   $('#service-link').addClass("active");
 </script>
-{% endblock }
+{% endblock %}

@@ -1,11 +1,17 @@
+{% load static %}
 <section id="presentation-detail">
-    <div class="close-overlay">Close &times;</div>
-    <div id="presentation-title">
-        <h4></h4>
+    <div id="popup-banner">
+        <img src="{% static 'imgs/popup-banner1-crop.png' %}" alt="I want to help guide you on your journey to thriving" />
     </div>
-    <article class="top-20">
-        <p>In this presentation, participants will:</p>
-        <div id="presentation-content">
+    <section id="presentation-detail-inner">
+        <div class="close-overlay">&times;</div>
+        <div id="presentation-title">
+            <h3></h3>
+            <h4></h4>
         </div>
-    </article>
+        <article id="presentation-content-outer">
+            <div id="presentation-content">
+            </div>
+        </article>
+    </section>
 </section>

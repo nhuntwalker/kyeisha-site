@@ -9,7 +9,7 @@ DATE_FMT = '%b %d, %Y'
 DEFAULT_LOGISTICS = """<ul>
     <li><p>8 group sessions total</p></li>
     <li><p>Total of 12 phenomenal women per group</p></li>
-    <li><p>Weekly "office hours" (TBD in the new year) over the phone where I’m available for troubleshooting, Q&A, and check-ins</p></li>
+    <li><p>Weekly "office hours" (TBA) over the phone where I’m available for troubleshooting, Q&A, and check-ins</p></li>
     <li><p>Formation of daily self-care practice-exercises (Monday through Friday) to help you stay focused, build momentum, and move forward throughout the week</p></li>
     <li><p>Tailored invitations to work on between sessions to help you get stronger and more free</p></li>
 </ul>"""
@@ -28,12 +28,12 @@ DEFAULT_OUTLINE = """
     <p class="group-coach-subhead">Topics:</p>
     <ul>
         <li>Understanding the common limiting beliefs associated with having to navigate domestic violence and childhood abuse.</li>
-        <li>Identifying your "Goliath limited beliefs" and its impact on the way you view safety, trust, power/control, intimacy, and self esteem.</li>
+        <li>Identifying your "Goliath limited beliefs" and their impact on the way you view safety, trust, power/control, intimacy, and self esteem.</li>
         <li>Learn tools to challenge and revise old negative patterns of thinking.</li>
     </ul>
 </div>
 <div>
-    <h4>Session 5 &amp; 6 &mdash; Evaluating Core Values</h4>
+    <h4>Session 5 &amp; 6 &mdash; Elevating Core Values</h4>
     <p class="group-coach-subhead">Topics:</p>
     <ul>
         <li>Articulate your values and WHY you have them</li>

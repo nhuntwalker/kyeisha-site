@@ -27,7 +27,7 @@
         </p>
     </section>
     {% if presentations %}
-    <section class="container">
+    <section id="presentation-list" class="container">
         {% for pair in presentation_pairs %}
             {% include 'speaking/presentation_row.html' %}
         {% endfor %}
@@ -53,7 +53,8 @@
     $('.speaking-item').on('click', function (event) {
         let pk = $(this).attr('data').split('-')[1]
         $.get(`/services/speaking/api/detail/${pk}`, response => {
-            $('#presentation-title h4').html(response.title)
+            $('#presentation-title h3').html(response.title)
+            $('#presentation-title h4').html(response.subtitle)
             $('#presentation-content').html(response.details)
             $('#speaking-overlay').show()
             $('body').addClass('noscroll')

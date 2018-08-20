@@ -11,7 +11,7 @@
       Education and Training
     </h2>
     <div id="about1" class="about-img-div">
-      <img class="about-img" src="{% static 'imgs/red-cropped.jpg' %}" />
+      <img class="about-img" src="{% static 'imgs/kye-about.jpg' %}" />
     </div>
     <p>
       I am a Licensed Mental Health Counselor (# LH 60680488). I graduated with honors with my Master’s Degree in Mental Health
@@ -37,7 +37,6 @@
   </section>
   <section class="container divider">
     <h2 class="text-center">My Clinical &amp; Personal Values</h2>
-    <p>The following values serve as the backbone of the work I do.</p>
     <article class='value-item'>
       <h4>Collaboration</h4>
       <p>
@@ -82,12 +81,15 @@
       to caucus with other students.
     </p>
   </section>
-  <section class="container divider">
+  <section class="container">
     <h2 class="text-center">
       My Personal Passions
     </h2>
+    <div id="dance-img">
+      <img src="{% static 'imgs/kye-dance.jpg' %}" class="text-left" />
+    </div>
     <p>
-      <img src="{% static 'imgs/kye-dance.jpg' %}" class="text-left" /> I am extremely passionate about self-care and self-development.
+      I am extremely passionate about self-care and self-development.
       My passion and my love is dance. I am an amateur dancer who re-discovered my passion for the art a few years ago. I'm also
       a huge fan of Beyonce's choreography. Enough to learn it &amp; offer a dance “class” at a local dance studio temporarily
       for fun. I’m also a music junkie, humor enthusiast, "lyric decipherer", and someone who is in awe of women's ability to
@@ -101,4 +103,4 @@
   $('#navbar .navbar-nav .active').removeClass("active");
   $('#about-link').addClass("active");
 </script>
-{% block %}
+{% endblock %}
