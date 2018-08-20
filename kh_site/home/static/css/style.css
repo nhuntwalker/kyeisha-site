@@ -59,6 +59,9 @@ ul {
   overflow: hidden;
 }
 
+p a {
+    text-decoration: underline;
+}
 
 
 /* hidden navigation bar*/
@@ -671,7 +674,7 @@ span.mobile-item {
 
 /* Healers */
 .top-logo img {
-    width: 70%;
+    width: 33vw;
     margin: auto;
 }
 
@@ -727,6 +730,28 @@ span.mobile-item {
     float: right;
 }
 
+#limited-offer {
+    width: 40vw;
+    background-color: #ED8E71;
+    margin: auto;
+    border-left: none;
+    padding: 10px;
+}
+#limited-offer a {
+    text-decoration: none;
+    color: black;
+}
+#limited-offer h4 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.6em;
+    margin: 10px auto 20px;
+}
+#limited-inner {
+    background-color: rgba(255, 255, 255, .7);
+    padding: 20px 12px 30px;
+    font-size: 0.8em;
+}
 
 /* Counseling Page */
 .quote{
@@ -915,7 +940,6 @@ span.mobile-item {
 #share-btn {
     text-transform: uppercase;
     font-size: 0.8em;
-    cursor: pointer;
     height: 28.5px;
     overflow: hidden;
 }
@@ -933,7 +957,7 @@ span.mobile-item {
     float: left!important;
     list-style-type: none!important;
     padding: 0;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 #share-list a:hover,
 #share-list a:focus {
@@ -946,6 +970,7 @@ span.mobile-item {
     color: white;
     text-align: center;
     font-size: 1.2em;
+    margin: 0 3px;
 }
 .share-link i {
     position: relative;
@@ -994,7 +1019,7 @@ span.mobile-item {
     display: inline-block;
 }
 .text-divider {
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 #blog-article {
@@ -1017,6 +1042,7 @@ span.mobile-item {
 #article-signature {
     color: #EC8E71;
     float: right;
+    width: 40%;
 }
 #article-signature img {
     width: 100%;
