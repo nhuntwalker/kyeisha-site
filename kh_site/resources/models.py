@@ -34,5 +34,9 @@ class Resource(models.Model):
     email = models.EmailField(blank=True, null=True)
     position = models.IntegerField(null=True, blank=True)
 
+    class Meta:
+        verbose_name = "Mental Health Resource"
+        verbose_name_plural = "Mental Health Resources"
+
     def __str__(self):
         return self.title

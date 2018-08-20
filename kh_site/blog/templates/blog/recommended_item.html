@@ -3,11 +3,7 @@
   <a href="{% url 'blog_detail_slug' slug=article.slug %}" class="title-link">
     <div class="recommended-title">
         <h4>
-            {% if article.short_title %}
-                {{ article.short_title }}
-            {% else %}
-                {{ article.title }}
-            {% endif %}
+            {{ article.title }}
         </h4>
     </div>
 </a>

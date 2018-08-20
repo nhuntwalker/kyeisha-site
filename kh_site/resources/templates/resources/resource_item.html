@@ -1,3 +1,4 @@
+{% load resource_functions %}
 <div class="col-md-12 divider resource-list">
     <h4>{{ resource.title }}</h4>
     <div class="resource-inner">
@@ -8,7 +9,7 @@
         <p><a href="{{ resource.link }}" target="_blank">{{ resource.link }}</a></p>
         {% endif %}
         {% if resource.phone_number %}
-        <p><a href="tel:{{ resource.phone_number }}">{{ resource.phone_number }}</a></p>
+        <p><a href="tel:{{ resource.phone_number | format_phone }}">{{ resource.phone_number }}</a></p>
         {% endif %}
     </div>
 </div>

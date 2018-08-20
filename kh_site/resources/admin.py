@@ -16,6 +16,7 @@ class ResourceAdmin(admin.ModelAdmin):
     """Administrator for the Resource object."""
 
     list_display = ['title', 'phone_number', 'position']
+    exclude = ["description"]
 
 
 admin.site.register(Category)
