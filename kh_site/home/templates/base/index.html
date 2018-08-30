@@ -92,6 +92,17 @@
 {% endblock %}
 {% block script %}
   <script>
+    let now = new Date()
+    if (localStorage.lastLoaded) {
+      let loaded = new Date(localStorage.lastLoaded);
+      let msPerMinute = 60000;
+      if ((now - loaded) / msPerMinute < 30) {
+        setTimeout(_ => {
+          $('#loading-overlay').fadeOut()
+        }, 10)
+      }
+    }
+    localStorage.lastLoaded = now
     setTimeout(_ => {
       $('#loading-overlay').fadeOut()
     }, 1800)
