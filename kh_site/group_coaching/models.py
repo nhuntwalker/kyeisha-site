@@ -80,6 +80,10 @@ class CoachingEvent(models.Model):
         default=False, help_text='Is this the next group?'
     )
 
+    class Meta:
+        verbose_name = "Counseling Event"
+        verbose_name_plural = "Counseling Events"
+
     def __repr__(self):
         return f"<Coaching Event | start { self.start_date.strftime(DATE_FMT) } >"
 

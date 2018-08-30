@@ -70,6 +70,12 @@ p a {
     display: block;
 }
 
+/* Administrative backend */
+
+form .aligned ul li {
+  list-style-type: disc;   
+}
+
 /* hidden navigation bar*/
 nav {
     color: white;

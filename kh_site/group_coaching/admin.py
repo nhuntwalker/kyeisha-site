@@ -21,7 +21,7 @@ end_date_formatter.short_description = 'Ending Date'
 
 @admin.register(CoachingEvent)
 class CounselingEventAdmin(admin.ModelAdmin):
-    """Administration of the Coaching Event model."""
+    """Administration of the Couseling Event model."""
 
     fields = [
         'start_date', 'end_date', 'meeting_days', 'current_event',
