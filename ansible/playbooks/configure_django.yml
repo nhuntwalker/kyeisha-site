@@ -8,9 +8,10 @@
     - name: Clone the repository down
       git: 
         clone=yes
-        repo=https://github.com/nadiabahrami/kh-project.git
+        force=yes
+        repo=https://github.com/nhuntwalker/kyeisha-site.git
         dest=/home/ubuntu/kh-project
-        version=revisions-2018
+        version=master
 
     - name: Create a virtual environment in the project directory
       command: python3.6 -m venv {{ env_path }}
