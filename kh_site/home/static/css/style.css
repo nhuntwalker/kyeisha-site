@@ -469,10 +469,6 @@ span.mobile-item {
     font-size: 1.5em;
 }
 
-.service:hover {
-    color:lightgrey;
-    background-color: rgba(0, 109, 190, .7);
-}
 
 #home-top {
     text-align: center;
