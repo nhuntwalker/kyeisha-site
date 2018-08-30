@@ -10,11 +10,26 @@
   <section class="container divider">
     <h2 class="text-center">Current Group</h2>
     <article id="group-event-info">
-      <p><strong>Start date:</strong> {{ event.start_date }}</p>
-      <p><strong>End date:</strong> {{ event.end_date }}</p>
-      <p><strong>Day(s) of the Week:</strong> {{ event.meeting_days }}</p>
-      <p><strong>Time:</strong> {{ event.start_time }} - {{ event.end_time }} PST</p>
-      <p><strong>Location:</strong> <a href="https://www.google.com/maps/place/{{ event.location | format_location }}" target="_blank">{{ event.location }} <i class="fa fa-globe" aria-hidden="true"></i></a></p>
+      <div>
+        <p><strong>Start date:</strong></p>
+        <p class="event-detail-item">{{ event.start_date }}</p>
+      </div>
+      <div>
+        <p><strong>End date:</strong></p>
+        <p class="event-detail-item">{{ event.end_date }}</p>
+      </div>
+      <div>
+        <p><strong>Day(s) of the Week:</strong></p>
+        <p class="event-detail-item">{{ event.meeting_days }}</p>
+      </div>
+      <div>
+        <p><strong>Time:</strong></p>
+        <p class="event-detail-item">{{ event.start_time }} - {{ event.end_time }} PST</p>
+      </div>
+      <div>
+        <p><strong>Location:</strong></p>
+        <p class="event-detail-item"><a href="https://www.google.com/maps/place/{{ event.location | format_location }}" target="_blank">{{ event.location }} <i class="fa fa-globe" aria-hidden="true"></i></a></p>
+      </div>
       <div class="text-center top-20">
         <a href="{{ event.external_link }}" class="join-btn top-40">
           <button>Join the Group</button>

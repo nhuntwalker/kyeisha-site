@@ -6,6 +6,10 @@
   <h1 class="text-center">Contact</h1>
 </section>
 <div class="container" id="contact-body">
+    <div class="col-md-12 mobile-only">
+        <p class="contact-p">I offer services in a warm and comfortable environment conveniently located in Seattle's Fremont neighborhood.
+            My office is in the Seattle Space Building</p>
+    </div>
     <div class="col-md-3">
         <h3>Address:</h3>
         <section id="address">
@@ -16,14 +20,28 @@
             </ul>
             <p id="find-me"><a href="https://www.google.com/maps/place/Introspective+Counseling+-+Kyeisha+Hodge/@47.6517406,-122.353203,17z/data=!3m1!4b1!4m5!3m4!1s0x54901500aacc2e7f:0x156ca010744175d5!8m2!3d47.6517406!4d-122.3510143" target="_blank">Find me! <i class="fa fa-globe" aria-hidden="true"></i></a></p>
         </section>
-        <h4>Parking:</h4>
-        <p>Paid street parking is available 8am to 8pm on the street surrounding the Fremont Office.</p>
+        <section class="desktop-only">
+            <h4>Parking:</h4>
+            <p>Paid street parking is available 8am to 8pm on the street surrounding the Fremont Office.</p>
+        </section>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 desktop-only">
         <p class="contact-p">I offer services in a warm and comfortable environment conveniently located in Seattle's Fremont neighborhood. My office is in the Seattle Space Building</p>
         <p class="contact-p">Please contact me directly to inquire about available time slots.</p>
         <p class="contact-p">Call <a href="tel:+12057750502">(205) 775-0502</a> or email me at <a href="mailto:kyeisha@kyeishahodge.com?subject=Services Request">kyeisha@kyeishahodge.com</a></p>
+    </div>
+    <div class="col-md-9 container" id="map-container">
         <div id="map"></div>
+    </div>
+    <div class="mobile-only">
+        <div class="container divider" id="parking">
+            <h4>Parking:</h4>
+            <p>Paid street parking is available 8am to 8pm on the street surrounding the Fremont Office.</p>
+        </div>
+        <div class="container">
+            <p class="contact-p">Please contact me directly to inquire about available time slots.</p>
+            <p class="contact-p">Call <a href="tel:+12057750502">(205) 775-0502</a> or email me at <a href="mailto:kyeisha@kyeishahodge.com?subject=Services Request">kyeisha@kyeishahodge.com</a></p>
+        </div>
     </div>
 </div>
 {% endblock %}
