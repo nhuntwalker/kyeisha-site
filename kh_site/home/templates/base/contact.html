@@ -31,7 +31,14 @@
         <p class="contact-p">Call <a href="tel:+12057750502">(205) 775-0502</a> or email me at <a href="mailto:kyeisha@kyeishahodge.com?subject=Services Request">kyeisha@kyeishahodge.com</a></p>
     </div>
     <div class="col-md-9 container" id="map-container">
-        <div id="map"></div>
+        <div id="map">
+            <a href="https://goo.gl/maps/HCuLECP3FBC2" target="_blank">
+                <img width="600" src="https://maps.googleapis.com/maps/api/staticmap?autoscale=1&size=600x300&maptype=roadmap&key={{ GOOGLE_KEY }}&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:1%7C47.6514919,+-122.3510309"
+                    alt="Google Map of 47.6514919, -122.3510309" />
+<!--                <img src="https://maps.googleapis.com/maps/api/staticmap?autoscale=1&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:1%7C47.6514919,+-122.3510309"
+                    alt="Google Map of Kyeisha Hodge's office" />   --> 
+            </a>
+        </div>
     </div>
     <div class="mobile-only">
         <div class="container divider" id="parking">
@@ -50,21 +57,4 @@
     $('#navbar .navbar-nav li').removeClass("active");
     $('#contact-link').addClass("active");
 </script>
-<script>
-    function initMap() {
-        var myLatLng = { lat: 47.6514919, lng: -122.3510309 };
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: myLatLng
-        });
-
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: "Kyeisha Hodge's Office"
-        });
-    }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_KEY }}&callback=initMap" async defer></script>
 {% endblock %}
