@@ -33,10 +33,8 @@
     <div class="col-md-9 container" id="map-container">
         <div id="map">
             <a href="https://goo.gl/maps/HCuLECP3FBC2" target="_blank">
-                <img width="600" src="https://maps.googleapis.com/maps/api/staticmap?autoscale=1&size=600x300&maptype=roadmap&key={{ GOOGLE_KEY }}&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:1%7C47.6514919,+-122.3510309"
-                    alt="Google Map of 47.6514919, -122.3510309" />
-<!--                <img src="https://maps.googleapis.com/maps/api/staticmap?autoscale=1&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:1%7C47.6514919,+-122.3510309"
-                    alt="Google Map of Kyeisha Hodge's office" />   --> 
+                <img src="{% static 'imgs/map-to-office.png' %}"
+                    alt="Map to Kyeisha Hodge's office" />
             </a>
         </div>
     </div>
