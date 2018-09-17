@@ -2,7 +2,8 @@
 {% load static %}
 {% block content %}
 <section id="banner">
-  <img src="{% static 'imgs/about-banner.png' %}">
+  <img class="desktop-only" src="{% static 'imgs/about-banner.png' %}" />
+  <img class="mobile-only" src="{% static 'imgs/about-mobile.png' %}" />
   <h1 class="text-center">About Kyeisha</h1>
 </section>
 <div class="container top-con">
@@ -14,25 +15,50 @@
       <img class="about-img" src="{% static 'imgs/kye-about.jpg' %}" />
     </div>
     <p>
-      I am a Licensed Mental Health Counselor (# LH 60680488). I graduated with honors with my Master’s Degree in Mental Health
+      I am a Licensed Mental Health Counselor (# LH 60680488).
+      I graduated with honors with my Master’s Degree in Mental Health
       Counseling from CUNY Hunter College and did my undergraduate work in Psychology and Sociology at Stony Brook University.
     </p>
     <p>
-      I have worked in the mental health field at several outpatient treatment centers for those with chemical dependency issues
-      and trauma. In 2012 I was licensed by the New York State Department of Health (DOH) as a Rape Crisis Emergency Room Counselor.
+      I have worked in the mental health field for several years.
+      I started out at several outpatient treatment centers for those with chemical dependency issues and trauma.
+      In 2012 I was licensed by the New York State Department of Health (DOH) as a Rape Crisis Emergency Room Counselor.
       As of 2014, I received the training that satisfied the Washington State requirements for a Domestic Violence direct service
       provider (WAC 388-61A-0350).
     </p>
     <p>
-      I have worked at the YWCA Domestic Violence Emergency Shelter where I assisted women fleeing from abusive relationships.
-      Additionally I have served as a mental health counselor at Seattle Therapy Alliance, a low-income clinic for women in Seattle
-      where I supported clients who suffer from trauma-related symptoms such as PTSD, Anxiety and Depression.
+      I have worked at the <a href="https://www.ywcaworks.org/programs/domestic-violence-advocacy">YWCA Domestic Violence Emergency Shelter</a> where I assisted women fleeing from abusive relationships.
+      Additionally I have served as a mental health counselor at <a href="http://seattletherapyalliance.com/">Seattle Therapy Alliance</a>, a low-income clinic for women in Seattle where I supported clients who suffer from trauma-related symptoms such as PTSD, Anxiety, and Depression.
     </p>
     <p>
-      The type of counseling theories I am influenced by are Narrative Therapy and Cognitive Processing Therapy. Narrative therapy
-      focuses on uncovering the stories we create about ourselves and acknowledges our power to rewrite the destructive ones.
-      Cognitive Processing Therapy offers concrete techniques to change limiting beliefs, thoughts, actions and assumptions that
-      get in the way of living the highest quality of life possible.
+      I have worked closely with the organization <a href="http://www.puentesseattle.org/what-we-do/">Puentes</a>, who work to mobilize mental health resources to assist undocumented migrants and their families in coping with deportation and migrant detention.
+      I have conducted psychosocial assessments which can be crucial in deciding the outcome of an immigration case.
+    </p>
+    <p>
+      I am a proud champion of the mental health and self care standards of fellow healers which lead to the creation of "Healing the Healers" which for years has served the needs of healers in the Pacific Northwest.
+      <a href="{% url 'healing_healers' %}">Click here to learn more</a>.
+    </p>
+    <p>
+      The type of counseling theories I am influenced by are Narrative Therapy and Cognitive Processing Therapy.
+      Narrative Therapy focuses on uncovering the stories we create about ourselves and acknowledges our power to rewrite the destructive ones.
+      Cognitive Processing Therapy offers concrete techniques to change limiting beliefs, thoughts, actions, and assumptions that get in the way of living the highest quality of life possible.
+    </p>
+  </section>
+  <section class="container divider">
+    <h2 class="text-center">
+      Social Justice Work
+    </h2>
+    <p>
+      I am committed to creating and maintaining opportunities for social justice and combating oppression.
+      I have had extensive training in social justice counseling and various issues related to the intersection of class, gender, race, and sexual orientation, as well as their impact on mental health.
+    </p>
+    <p>
+      My past anti-oppression services also include creating and facilitating the group "Having the Conversation: Discussing Race, Oppression and Privilege".
+      For almost a year, this free community group served participants as they navigated the effects of racism.
+      In 2015 I created and facilitated trainings at the YWCA detailing the intersection of racism and domestic violence.
+    </p>
+    <p>
+      I recently served as a guest facilitator at the University of Washington’s “Racial Justice Organizing and Caucus” where I assisted in facilitating conversations regarding the murder by police of black people by providing participants a space to caucus with other students.
     </p>
   </section>
   <section class="container divider">
@@ -40,7 +66,8 @@
     <article class='value-item'>
       <h4>Collaboration</h4>
       <p>
-        I operate from the basic assumption that we are equal collaborators. Experts in what we know and ignorant in what we do not.
+        I operate from the basic assumption that we are equal collaborators.
+        Experts in what we know and ignorant in what we do not.
         This framework establishes curiosity and partnership.
       </p>
     </article>
@@ -54,32 +81,16 @@
     <article class='value-item'>
       <h4>Social Justice</h4>
       <p>
-        My work highlights the effects that racism and sexism have on our development. This then challenges the lies of oppression
-        that lead to emotional and psychological distress.
+        My work highlights the effects that racism and sexism have on our development.
+        This then challenges the lies of oppression that lead to emotional and psychological distress.
       </p>
     </article>
     <article class="value-item">
-      <h4>Self-Devleopment</h4>
+      <h4>Self-Development</h4>
       <p>
-        I believe self-development never ends and there are infinite ways to enhance and cultivate ourselves so we can invite in
-        the experiences that our spirits crave.
+        I believe self-development never ends and there are infinite ways to enhance and cultivate ourselves so we can invite in the experiences that our spirits crave.
       </p>
     </article>
-  </section>
-  <section class="container divider">
-    <h2 class="text-center">
-      Anti-Oppression Work
-    </h2>
-    <p>
-      My past anti-oppression services also include creating and facilitating the group “Having the Conversation: Discussing Race,
-      Oppression and Privilege”. For almost a year, this free community group served participants as they navigated the effects
-      of racism. In 2015 I created and facilitated trainings at the YWCA detailing the intersection of racism and domestic violence.
-    </p>
-    <p>
-      I recently served as a guest facilitator at the University of Washington’s “Racial Justice Organizing and Caucus” where I
-      assisted in facilitating conversations regarding the murder by police of black people by providing participants a space
-      to caucus with other students.
-    </p>
   </section>
   <section class="container">
     <h2 class="text-center">
@@ -90,10 +101,11 @@
     </div>
     <p>
       I am extremely passionate about self-care and self-development.
-      My passion and my love is dance. I am an amateur dancer who re-discovered my passion for the art a few years ago. I'm also
-      a huge fan of Beyonce's choreography. Enough to learn it &amp; offer a dance “class” at a local dance studio temporarily
-      for fun. I’m also a music junkie, humor enthusiast, "lyric decipherer", and someone who is in awe of women's ability to
-      create life.
+      My passion and my love is dance.
+      I am an amateur dancer who re-discovered my passion for the art a few years ago.
+      I'm also a huge fan of Beyonce's choreography.
+      Enough to learn it &amp; offer a dance "class" at a local dance studio temporarily for fun.
+      I’m also a music junkie, humor enthusiast, "lyric decipherer", and someone who is in awe of women's ability to create life.
     </p>
   </section>
 </div>

@@ -3,7 +3,8 @@
 {% load blog_functions %}
 {% block content %}
 <section id="banner">
-  <img src="{% static 'imgs/blog-full.png' %}">
+  <img class="desktop-only" src="{% static 'imgs/blog-full.png' %}" />
+  <img class="mobile-only" src="{% static 'imgs/blog-mobile.png' %}" />
   <h1 class="text-center">Blog</h1>
 </section>
 <div id="blog-body" class="container">

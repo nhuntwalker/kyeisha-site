@@ -2,11 +2,13 @@
 {% load static %}
 {% block content %}
 <section id="banner">
-  <img src="{% static 'imgs/contact-full.jpg' %}">
-  <h1 class="text-center">Contact</h1>
+    <img class="desktop-only" src="{% static 'imgs/contact-full.jpg' %}">
+    <img class="mobile-only" src="{% static 'imgs/contact-mobile.png' %}">
+    <h1 class="text-center">Contact</h1>
 </section>
 <div class="container" id="contact-body">
     <div class="col-md-12 mobile-only">
+        <h3>Vibrant Fremont Space</h3>
         <p class="contact-p">I offer services in a warm and comfortable environment conveniently located in Seattle's Fremont neighborhood.
             My office is in the Seattle Space Building</p>
     </div>

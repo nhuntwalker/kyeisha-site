@@ -2,7 +2,8 @@
 {% load static %}
 {% block content %}
 <section id="banner">
-  <img src="{% static 'imgs/resources-full.png' %}">
+    <img class="desktop-only" src="{% static 'imgs/resources-full.png' %}" />
+    <img class="mobile-only" src="{% static 'imgs/resources-mobile.png' %}" />
   <h1 class="text-center">Resources</h1>
 </section>
 <div class="container top-con" id="resources-body">

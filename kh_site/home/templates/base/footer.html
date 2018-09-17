@@ -1,15 +1,16 @@
 {% load static %}
 <footer class="footer container">
   <section id="consult">
-    <a target="_blank" href="https://www.timetrade.com/app/td-4213452/workflows/wgwch/schedule/availability?wfsid=b07a7e16-baba97f6-b07af3d1-baba97f6-00000002-6q4m7itfgise3c345ono5fk7h9il2tn6&view=full&fs=1">
-      <img src="{% static 'imgs/footer.png' %}" />
+    <a target="_blank" href="#">
+      <img class="desktop-only" src="{% static 'imgs/footer.png' %}" />
+      <img class="mobile-only" src="{% static 'imgs/footer-mobile.png' %}" />
     </a>
   </section>
   <div class="container contact-outer">
     <ul class="contact-mobile">
       <li>
         <a href="tel:+12057550502">
-          <img class="footer-contact" src="{% static 'imgs/telephone.png' %}" />1 . 205 . 755 . 0502
+          <img class="footer-contact" src="{% static 'imgs/telephone.png' %}" />(205) 755-0502
         </a>
       </li>
       <li>
@@ -32,7 +33,7 @@
       <tr>
         <td>
           <a href="tel:+12057550502">
-            <img class="footer-contact" src="{% static 'imgs/telephone.png' %}" />1 . 205 . 755 . 0502
+            <img class="footer-contact" src="{% static 'imgs/telephone.png' %}" />(205) 755-0502
           </a>
         </td>
         <td class="center-contact">

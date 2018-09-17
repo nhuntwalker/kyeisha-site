@@ -2,24 +2,25 @@
 {% load static %}
 {% block content %}
 <section id="banner">
-  <img src="{% static 'imgs/speaking-full.jpg' %}" />
-  <h1 class="text-center">Speaking</h1>
+    <img class="desktop-only" src="{% static 'imgs/speaking-full.jpg' %}" />
+    <img class="mobile-only" src="{% static 'imgs/speaking-mobile.png' %}" />
+    <h1 class="text-center">Speaking</h1>
 </section>
 <div class="container top-con">
     <section class="container">
         <h3 class="text-center">Presentations that Transform</h3>
         <p class="top-20">
-            I offer talks that motivate, uncover bold truths, and facilitate restoration within individuals and organizations.
-            My talks offer the opportunity to educate staff on the various topics concerning Mental Health and self development.
-            In the era of Trump, #metoo, and #blacklivesmatter people have begun to crave conversations about abuse and healing that matter.
-            However, they are unsure of how to facilitate these conversations.
-            That's where my talks and workshops step in to fill that void.
+            Uncover bold truths, restoration and healing within yourself and your organization!
+            My talks are designed to educate on various topics concerning Mental Health and self development.
         </p>
         <p>
+            In this era of Trump, #metoo, and #blacklivesmatter, people have begun to crave conversations that demystify abuse and center survivors and healing.
+            Yet,there is confusion on how to facilitate these conversations; my talks and workshops step in to fill this void.
             I discuss the effects that domestic violence, sexual assault, racism, and sexism have on an individual’s mental health, as well as how to overcome them personally and professionally.
         </p>
         <p>
             I have been honored to hold workshops and talks addressing these topics at companies such as the YWCA, Seattle Therapy Alliance, Rainier Valley Corps, and Wonder of Women Inc.
+            <a href="#" id="show-request-form">Click here</a> if you'd like to request me as a speaker for your organization.
         </p>
         <p>
             Below are my most requested talks and workshops.
@@ -44,6 +45,9 @@
 <div id="speaking-overlay">
     {% include 'speaking/presentation_detail.html' %}
 </div>
+<div id="request-form-overlay">
+    {% include 'speaking/request_speaker.html' %}
+</div>
 {% endblock %}
 {% block script %}
 <script>
@@ -60,10 +64,24 @@
             $('body').addClass('noscroll')
         })
     })
+
+    $('#presentation-detail #popup-banner').on('click', function(event){
+        $("#speaking-overlay").hide()
+        $("#request-form-overlay").show()
+        $("body").addClass("noscroll")
+    })
+
+    $('#show-request-form').on('click', function(event) {
+        $("#request-form-overlay").show()
+        $("body").addClass("noscroll")
+    })
+
     let closeOverlay = _ => {
         $('#speaking-overlay').hide()
+        $("#request-form-overlay").hide()
         $('body').removeClass('noscroll')
     }
+
     $('.close-overlay').on('click', closeOverlay)
     $('body').on('keyup', function (event) {
         if (event.keyCode === 27) {

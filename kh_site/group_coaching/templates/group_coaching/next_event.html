@@ -3,7 +3,8 @@
 {% load static %}
 {% block content %}
 <section id="banner">
-  <img src="{% static 'imgs/group-counseling-full.jpg' %}">
+  <img class="desktop-only" src="{% static 'imgs/group-counseling-full.jpg' %}">
+  <img class="mobile-only" src="{% static 'imgs/group-counseling-mobile.png' %}">
   <h1 class="text-center small-h1">Group Counseling Details</h1>
 </section>
 <div class="container top-con">

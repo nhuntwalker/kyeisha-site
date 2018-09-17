@@ -145,6 +145,9 @@ nav .navbar-collapse ul .active a:hover {
 #drop-opt {
     color:#333;
 }
+.dropdown-menu>li>a {
+    font-size: 1.1em;
+}
 
 .navbar-brand,
 .navbar-brand:hover,
@@ -275,13 +278,15 @@ span.mobile-item {
 }
 .contact-list a {
     color: black;
+    font-size: 1.1em;
 }
 .contact-list td {
     font-size: 1.2em;
+    font-weight: 500;
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1100px) {
     .contact-list td {
-        font-size: 1em;
+        font-size: 1.1em;
     }
     .contact-outer {
         width: 98%;
@@ -830,7 +835,9 @@ span.mobile-item {
 
 /*Speaking Page*/
 
-#speaking-overlay {
+#speaking-overlay,
+#request-form-overlay,
+#healers-form-overlay {
     display: none;
     width: 100vw;
     height: 100vh;
@@ -859,7 +866,9 @@ span.mobile-item {
 #popup-banner {
     width: 50vw;
 }
-#presentation-detail {
+#presentation-detail,
+#request-form-detail,
+#healers-form-detail {
     width: 50vw;
     background-color: white;
     position: absolute;
@@ -870,6 +879,10 @@ span.mobile-item {
     font-family: 'Raleway', sans-serif;
     padding-bottom: 30px;
 }
+#speaker-banner {
+    cursor: pointer;
+}
+
 #presentation-detail-inner {
     max-height: 40vh;
     overflow-y: scroll;
