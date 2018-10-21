@@ -9,7 +9,7 @@
 </section>
 <div class="container top-con">
   <section class="container divider">
-    <h2 class="text-center">Current Group</h2>
+    <h2 class="text-center">Upcoming Group</h2>
     <article id="group-event-info">
       <div>
         <p><strong>Start date:</strong></p>
@@ -32,9 +32,7 @@
         <p class="event-detail-item"><a href="https://www.google.com/maps/place/{{ event.location | format_location }}" target="_blank">{{ event.location }} <i class="fa fa-globe" aria-hidden="true"></i></a></p>
       </div>
       <div class="text-center top-20">
-        <a href="{{ event.external_link }}" class="join-btn top-40">
-          <button>Join the Group</button>
-        </a>
+        <p>Contact me at <a href="mailto:kyeisha@kyeishahodge.com?subject=Group therapy inquiry for {{ event.start_date }}">kyeisha@kyeishahodge.com</a> to enroll in this group.</p>
       </div>
     </article>
   </section>
