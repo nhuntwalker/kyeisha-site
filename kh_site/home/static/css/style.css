@@ -510,11 +510,8 @@ span.mobile-item {
 #consult .container {
     width: 100%;
 }
-#consult a {
-    text-decoration: none;
-}
-#consult a:hover {
-    text-decoration: none;
+#consult:hover {
+    cursor: pointer;
 }
 
 #consult-container{
@@ -837,7 +834,8 @@ span.mobile-item {
 
 #speaking-overlay,
 #request-form-overlay,
-#healers-form-overlay {
+#healers-form-overlay,
+#mailing-list-overlay {
     display: none;
     width: 100vw;
     height: 100vh;
@@ -868,7 +866,8 @@ span.mobile-item {
 }
 #presentation-detail,
 #request-form-detail,
-#healers-form-detail {
+#healers-form-detail,
+#mailing-list-form-detail {
     width: 50vw;
     background-color: white;
     position: absolute;
