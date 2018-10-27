@@ -27,11 +27,6 @@
               <i class="fa fa-twitter" aria-hidden="true"></i>
             </li>
           </a>
-          <a href="https://plus.google.com/share?url=http://{{ request.get_host }}{% url 'blog_detail_pk' pk=article.pk %}" target="_blank" class="Share with Google plus">
-            <li class="google-share share-link">
-              <i class="fa fa-google-plus" aria-hidden="true"></i>
-            </li>
-          </a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://{{ request.get_host }}{% url 'blog_detail_pk' pk=article.pk %}&title={{ article.title }}&summary={{ article.excerpt }}" target="_blank" title="Share with LinkedIn">
             <li class="linkedin-share share-link">
               <i class="fa fa-linkedin" aria-hidden="true"></i>
