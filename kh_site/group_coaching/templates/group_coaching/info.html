@@ -48,7 +48,7 @@
       {{ event.outline | safe }}
     </article>
   </section>
-  <section class="container">
+  <section class="container divider">
     <h3 class="text-center">Current Group Logistics</h3>
     {{ event.logistics | safe }}
     <article id="group-event-info">
@@ -78,7 +78,24 @@
           to enroll in this group.</p>
       </div>
     </article>
-
+  </section>
+  <section class="container">
+    <h3 class="text-center">
+      Financial Investment
+    </h3>
+    <p>
+      The investment is ${{ event.cost }} per session, plus a testimonial and feedback to me at the end about what worked
+      best and your suggestions for improvement.
+    </p>
+    <p>Payment options include:</p>
+    <ul id="cost" class="listing">
+      <li>
+        Payments of ${{ event.cost }} set up at the same time weekly with credit/debit card
+      </li>
+      <li>
+        A one time payment of ${{ event.cost | lump_discount }} (save ${{ event.cost }})
+      </li>
+    </ul>
   </section>
 </div>
 {% endblock %}
