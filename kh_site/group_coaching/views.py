@@ -8,7 +8,7 @@ class EventDetail(DetailView):
 
     model = CoachingEvent
     context_object_name = 'event'
-    template_name = 'group_coaching/next_event.html'
+    template_name = 'group_coaching/info.html'
 
     def get_object(self, queryset=None):
         """Get the only event marked as "current"."""
