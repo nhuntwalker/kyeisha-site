@@ -659,6 +659,10 @@ span.mobile-item {
     margin-left: 1em;
 }
 
+.contact-line {
+    font-weight: 700;
+}
+
 .scrolloff {
     pointer-events: none;
 }
