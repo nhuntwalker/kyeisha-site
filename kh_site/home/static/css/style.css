@@ -878,6 +878,9 @@ span.mobile-item {
     font-family: 'Raleway', sans-serif;
     padding-bottom: 30px;
 }
+#presentation-detail {
+    height: 65vh;
+}
 #speaker-banner {
     cursor: pointer;
 }
