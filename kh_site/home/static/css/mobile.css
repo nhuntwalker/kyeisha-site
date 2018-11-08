@@ -57,11 +57,9 @@
     }
     #loading-text {
         width: 70vw;
-        top: 52%;
     }
     #loading-gif {
         width: 10vw;
-        top: 60%;
     }
 
     /* Navigation */
@@ -497,5 +495,12 @@
 
     .top-con {
         margin: 0 20px;
+    }
+
+    #presentation-detail,
+    #request-form-detail,
+    #healers-form-detail,
+    #mailing-list-form-detail {
+        width: 90vw;
     }
 }
