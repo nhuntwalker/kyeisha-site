@@ -2,6 +2,8 @@
 - hosts: deployment
   become: yes
   become_method: sudo
+  vars:
+    - allowed_hosts: "{{ lookup('csvfile', 'allowed_hosts file=../vars/aws_vars.csv delimiter=, col=1') }}"
   tasks:
     - name: Register the old default file
       stat: path=/etc/nginx/sites-available/default.old

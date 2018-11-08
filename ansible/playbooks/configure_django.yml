@@ -4,6 +4,7 @@
   become_method: sudo
   vars:
     - ansible_python_interpreter: /usr/bin/python3.6
+    - allowed_hosts: "{{ lookup('csvfile', 'allowed_hosts file=../vars/aws_vars.csv delimiter=, col=1') }}"
   tasks:
     - name: Clone the repository down
       git: 
