@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name {{ server_dns }};
+    server_name {{ allowed_hosts }};
     access_log /var/log/nginx/test.log;
 
     location / {
