@@ -75,7 +75,7 @@ if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
     hash -r
 fi
 
-export ALLOWED_HOSTS='{{ allowed_hosts }}'
+export ALLOWED_HOSTS={{ allowed_hosts }}
 export AWS_ACCESS_KEY_ID='{{ lookup("csvfile", "aws_access_key_id file=../vars/aws_vars.csv delimiter=, col=1") }}'
 export AWS_SECRET_ACCESS_KEY='{{ lookup("csvfile", "aws_secret_access_key file=../vars/aws_vars.csv delimiter=, col=1") }}'
 export DATABASE_URL='{{ lookup("csvfile", "database_url file=../vars/aws_vars.csv delimiter=, col=1") }}'

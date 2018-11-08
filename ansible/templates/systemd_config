@@ -7,7 +7,7 @@ Restart=on-failure
 User=nobody
 Group=nogroup
 
-Environment=ALLOWED_HOSTS={{ server_dns }}
+Environment=ALLOWED_HOSTS={{ allowed_hosts }}
 Environment=AWS_ACCESS_KEY_ID={{ lookup('csvfile', 'aws_access_key_id file=../vars/aws_vars.csv delimiter=, col=1') }}
 Environment=AWS_SECRET_ACCESS_KEY={{ lookup('csvfile', 'aws_secret_access_key file=../vars/aws_vars.csv delimiter=, col=1') }}
 Environment=DATABASE_URL={{ lookup('csvfile', 'database_url file=../vars/aws_vars.csv delimiter=, col=1') }}
