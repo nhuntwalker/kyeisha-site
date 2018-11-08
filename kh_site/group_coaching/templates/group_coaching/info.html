@@ -10,7 +10,7 @@
 <div class="container top-con">
   <section class="container divider">
     <h2 class="text-center">
-      Roots of Restoration: A Womens' Healing Circle
+      Roots of Restoration: A Women's Healing Circle
     </h2>
     <p>
       Together, in this Seattle-based group we will work to release old patterns, fears, and gain the empowerment and clarity necessary to pursue your ideal life.
@@ -24,7 +24,7 @@
   </section>
   <section class="container divider">
     <h3 class="text-center">
-      Who is the Group For?
+      Who is this Journey For?
     </h3>
     <p class="">
       This group is for ambitious women who have been impacted by negative relationships (including domestic violence and childhood abuse).
@@ -50,7 +50,9 @@
   </section>
   <section class="container divider">
     <h3 class="text-center">Current Group Logistics</h3>
+    <section id="group-logistics" class="bottom-40">
     {{ event.logistics | safe }}
+    </section>
     <article id="group-event-info">
       <div>
         <p><strong>Start date:</strong></p>
@@ -73,29 +75,36 @@
         <p class="event-detail-item"><a href="https://www.google.com/maps/place/{{ event.location | format_location }}"
             target="_blank">{{ event.location }} <i class="fa fa-globe" aria-hidden="true"></i></a></p>
       </div>
-      <div class="text-center top-20">
-        <p>Contact me at <a href="mailto:kyeisha@kyeishahodge.com?subject=Group therapy inquiry for {{ event.start_date }}">kyeisha@kyeishahodge.com</a>
-          to enroll in this group.</p>
-      </div>
+
     </article>
+    <div class="text-center top-20">
+      <p>Contact me at <a href="mailto:kyeisha@kyeishahodge.com?subject=Group therapy inquiry for {{ event.start_date }}">kyeisha@kyeishahodge.com</a>
+        to enroll in this group.</p>
+    </div>
   </section>
   <section class="container">
     <h3 class="text-center">
       Financial Investment
     </h3>
     <p>
-      The investment is ${{ event.cost }} per session, plus a testimonial and feedback to me at the end about what worked
-      best and your suggestions for improvement.
+      Standard payment for a journey like this would be upwards of $1,560!
+      However, I am offering a huge discount so that you start your new year off right! 
+      Below is a detailed explanation of the financial investment:
     </p>
-    <p>Payment options include:</p>
-    <ul id="cost" class="listing">
-      <li>
-        Payments of ${{ event.cost }} set up at the same time weekly with credit/debit card
-      </li>
-      <li>
-        A one time payment of ${{ event.cost | lump_discount }} (save ${{ event.cost }})
-      </li>
-    </ul>
+    <p>
+      <strong>Paid in Full:</strong> ${{ event.cost | lump_discount }} (${{ event.cost }} discount)
+    </p>
+    <p>
+      <strong>Pay in 3 Part Installments:</strong> Each session is $79.
+      <ol>
+        <li>${% widthratio event.cost 1 2 %} initial deposit</li>
+        <li>${% widthratio event.cost 1 2 %} due on {{ event.start_date }}</li>
+        <li>${% widthratio event.cost 1 4 %} due on {{ event.final_payment_date }}</li>
+      </ol>
+    </p>
+    <p>
+      Payments will be processed here in my office using a credit/debit card of your choosing.
+    </p>
   </section>
 </div>
 {% endblock %}

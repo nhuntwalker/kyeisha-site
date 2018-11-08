@@ -36,7 +36,7 @@ h4 {
     margin-top: 20px;
 }
 
-p {
+p, ol li {
     font-family: 'Raleway', sans-serif;
     font-size: 1.25em;
     line-height: 1.5em;
@@ -1174,13 +1174,22 @@ span.mobile-item {
     margin-bottom: 20px;
     list-style-type: disc;
 }
-.listing ul {
+.listing ul,
+#group-logistics ul {
     list-style-type: disc;
 }
-.listing li {
+.listing li,
+#group-logistics li {
     font-family: 'Raleway', sans-serif;
     line-height: 1.5em;
     letter-spacing: 0.03em;
+}
+
+#group-logistics li {
+    font-size: 1.25em;
+}
+#group-logistics p {
+    font-size: 1em;
 }
 
 .join-btn {
@@ -1200,6 +1209,11 @@ span.mobile-item {
 }
 .join-btn button:hover {
     background-color: rgba(237, 142, 113, 1)
+}
+
+#group-event-info {
+    border: thin solid #54F2CE;
+    padding: 20px;
 }
 
 #group-event-info div {
