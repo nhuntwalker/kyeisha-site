@@ -503,4 +503,8 @@
     #mailing-list-form-detail {
         width: 90vw;
     }
+
+    #presentation-detail-inner {
+        max-height: 50vh;
+    }
 }
