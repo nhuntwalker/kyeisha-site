@@ -59,7 +59,7 @@ class CoachingEvent(models.Model):
 
     start_date = models.DateField()
     end_date = models.DateField()
-    final_payment_date = models.DateField(auto_now=True)
+    final_payment_date = models.DateField()
     meeting_days = models.CharField(max_length=1024, default='Wednesdays')
     start_time = models.TimeField()
     end_time = models.TimeField()
