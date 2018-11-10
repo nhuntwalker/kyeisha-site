@@ -24,7 +24,7 @@ class CounselingEventAdmin(admin.ModelAdmin):
     """Administration of the Couseling Event model."""
 
     fields = [
-        'start_date', 'end_date', 'meeting_days', 'current_event',
+        'start_date', 'final_payment_date', 'end_date', 'meeting_days', 'current_event',
         'start_time', 'end_time', 'cost', 'external_link', 'location',
         'logistics', 'outline'
     ]
