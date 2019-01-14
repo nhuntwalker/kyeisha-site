@@ -55,14 +55,6 @@
     </section>
     <article id="group-event-info">
       <div>
-        <p><strong>Start date:</strong></p>
-        <p class="event-detail-item">{{ event.start_date }}</p>
-      </div>
-      <div>
-        <p><strong>End date:</strong></p>
-        <p class="event-detail-item">{{ event.end_date }}</p>
-      </div>
-      <div>
         <p><strong>Day(s) of the Week:</strong></p>
         <p class="event-detail-item">{{ event.meeting_days }}</p>
       </div>
@@ -95,15 +87,15 @@
       <strong>Paid in Full:</strong> ${{ event.cost | lump_discount }} (${{ event.cost }} discount)
     </p>
     <p>
-      <strong>Pay in 3 Part Installments:</strong> Each session is $79.
+      <strong>Pay in 3-Part Installments:</strong> Each session is $79. Payment schedule will look like the following:
       <ol>
-        <li>${% widthratio event.cost 1 2 %} initial deposit</li>
-        <li>${% widthratio event.cost 1 2 %} due on {{ event.start_date }}</li>
-        <li>${% widthratio event.cost 1 4 %} due on {{ event.final_payment_date }}</li>
+        <li>Initial deposit: ${% widthratio event.cost 1 2 %}</li>
+        <li>2nd payment: ${% widthratio event.cost 1 2 %}</li>
+        <li>3rd payment: ${% widthratio event.cost 1 4 %}</li>
       </ol>
     </p>
     <p>
-      Payments will be processed here in my office using a credit/debit card of your choosing.
+      Dates for payment will be announced for each group. Payments will be processed here in my office using a credit/debit card of your choosing.
     </p>
   </section>
 </div>
