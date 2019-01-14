@@ -1263,6 +1263,9 @@ span.mobile-item {
     font-size: 1.25em;
     margin-bottom: 10px;
 }
+#alternate-payment {
+    font-size: 0.75em;
+}
 
 /* Loading Overlay */
 

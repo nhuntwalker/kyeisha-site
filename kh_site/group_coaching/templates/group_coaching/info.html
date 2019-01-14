@@ -87,7 +87,7 @@
       <strong>Paid in Full:</strong> ${{ event.cost | lump_discount }} (${{ event.cost }} discount)
     </p>
     <p>
-      <strong>Pay in 3-Part Installments:</strong> Each session is $79. Payment schedule will look like the following:
+      <strong>Pay in 3-Part Installments*:</strong> Each session is $79. Payment schedule will look like the following:
       <ol>
         <li>Initial deposit: ${% widthratio event.cost 1 2 %}</li>
         <li>2nd payment: ${% widthratio event.cost 1 2 %}</li>
@@ -96,6 +96,9 @@
     </p>
     <p>
       Dates for payment will be announced for each group. Payments will be processed here in my office using a credit/debit card of your choosing.
+    </p>
+    <p id="alternate-payment">
+      * Other payment options are available, please email me directly about this.
     </p>
   </section>
 </div>
