@@ -930,6 +930,9 @@ span.mobile-item {
 .article- {
     background-color: orange;
 }
+#blog-body li {
+    font-size: 1.0em;
+}
 
 .article-test {
     background-color: orange;
