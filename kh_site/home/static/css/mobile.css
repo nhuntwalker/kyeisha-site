@@ -339,6 +339,9 @@
     #blog-article {
         padding: 10px 15px;
     }
+    #blog-body li {
+        font-size: 0.9em;
+    }
 
     #share-btn {
         width: 350px;
