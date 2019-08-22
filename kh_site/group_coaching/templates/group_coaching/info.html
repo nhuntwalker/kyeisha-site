@@ -5,101 +5,285 @@
 <section id="banner">
   <img class="desktop-only" src="{% static 'imgs/group-counseling-full.jpg' %}">
   <img class="mobile-only" src="{% static 'imgs/group-counseling-mobile.png' %}">
-  <h1 class="text-center">Groups</h1>
+  <h1 class="text-center" id="group-banner-text">Healing<br />Circle</h1>
 </section>
-<div class="container top-con">
-  <section class="container divider">
-    <h2 class="text-center">
-      Roots of Restoration: A Women's Healing Circle
-    </h2>
-    <p>
-      Together, in this Seattle-based group we will work to release old patterns, fears, and gain the empowerment and clarity necessary to pursue your ideal life.
-    </p>
-    <p>
-      Groups and healing circles provide a unique opportunity to heal, grow, and overcome the damage of repeatedly having your trust broken.
-      A group setting offers a safe place to take risks, and learn more about yourself.
-      Group members become mirrors for one another and reflect each other’s strengths, weaknesses, triggers, and potential for growth.
-      This combination produces powerful transformations!
-    </p>
-  </section>
-  <section class="container divider">
-    <h3 class="text-center">
-      Who is this Journey For?
-    </h3>
-    <p class="">
-      This group is for ambitious women who have been impacted by negative relationships (including domestic violence and childhood abuse).
-      They lead productive lives but still feel something is missing.
-    </p>
-    <p>
-      These women are committed to their personal development and are searching for tools and strategies to design their lives to take things to the next level.
-      They are tired of negative emotions, toxic relationships, aimlessness, and self-doubt creeping into their lives.
-      This group is for women who are willing to risk the discomfort and vulnerability associated with REAL transformation and are ready to step into their greatness.
-    </p>
-  </section>
-  <section class="container divider">
-    <h3 class="text-center">
-      Group Structure
-    </h3>
-    <p>
-      Each week we will review certain special topics while still leaving room to meet the various needs of the group.
-      Each session will include time to process day-to-day concerns, goal setting, accountability check-ins, and sharing breakthroughs.
-    </p>
-    <article class="top-40 listing" id="session-outline">
-      {{ event.outline | safe }}
-    </article>
-  </section>
-  <section class="container divider">
-    <h3 class="text-center">Current Group Logistics</h3>
-    <section id="group-logistics" class="bottom-40">
-    {{ event.logistics | safe }}
+<div class="top-con">
+  <section class="container text-center" id="event-top">
+    <h2 class="script">Roots of Restoration</h2>
+    <h3>A Healing Circle</h3>
+    <section id="event-date-time">
+      <p>Sep 25th - Nov 20th</p>
+      <p>Every Wed 6:30 - 8 p.m. PST</p>
     </section>
-    <article id="group-event-info">
-      <div>
-        <p><strong>Day(s) of the Week:</strong></p>
-        <p class="event-detail-item">{{ event.meeting_days }}</p>
+    <p>
+      The term restoration is a powerful one.
+      To restore something means you believe that its basic innate nature is already valuable as it is.
+    </p>
+    <h4>Already Worthy</h4>
+    <p>
+      Then, over the years the grim of what we’ve constrained ourselves to be creates mental and emotional rust that must be stripped away.
+    </p>
+    <h4>It's Time for Renewal</h4>
+    <p>
+      That's why I created the <strong>Roots of Restoration: A Women's Healing Circle</strong>.
+      This Sistah’s healing circle is a 9 week in-person experience, to assist black women in restoring their power and their connection to self and others.
+    </p>
+    <p>
+      In community, you will learn to trust yourself again and hear that deep well of wisdom you’ve always possessed.
+      This Healing Circle will review different shame-destroying techniques to help you establish a strong foundation of self-love, all the while removing limiting beliefs, and toxic energy from your mind, body and spirit.
+    </p>
+  </section>
+  <section class="text-center blue-bkg" id="question-list">
+    <section class="full-width-img">
+      <img src="{% static 'imgs/adults-afro-attractive-1857596.jpg' %}">
+    </section>
+    <div>
+      Do you yearn to connect to your power and inner wisdom?
+    </div>
+    <div>
+      Are you ready to declutter your mind, freeing up energy to focus on what really matters?
+    </div>
+    <div>
+      Are you ready to accomplish the things you want while remaining loving and loyal towards yourself?
+    </div>
+    <div>
+      Do you desire to build loving supportive relationships that challenge you and inspire you to greatness?
+    </div>
+    <div>
+      Are you ready to transform your mindset to get the things you value including being present, happy, and joyful?
+    </div>
+    <div>
+      Do you want to learn to better trust yourself?
+    </div>
+    <div>
+      Are you ready to overcome adversity in a way that won’t compromise your integrity?
+    </div>
+    <div>
+      Are you ready to go from asking yourself "what's wrong with me" to "what do I need to be or do to live a rewarding life?"
+    </div>
+    <div>
+      Do you want to learn to be a DESIGNER of your life?
+    </div>
+    <div>
+      Are you ready to gain clarity around what you value and step away from what you "should" value?
+    </div>
+    <img class="answer-yes" src="{% static 'imgs/answer-yes.png' %}">
+  </section>
+  <section class="container text-center" id="group-description">
+    <h2>Roots of Restoration</h2>
+    <h3>A Healing Circle</h3>
+    <p class="call-out">
+      Includes Personalized Self-Love Swag Bag!
+    </p>
+    <p>
+      Here’s what you’re getting with this life-altering 8-week in-person experience:
+    </p>
+  </section>
+  <section class="container" id="session-descriptions">
+    <div class="row">
+      <div class="col-md-4 session text-center">
+        <h2>
+          Session 1:<br/> Orientation and Preparation
+        </h2>
+        <p>
+          Group members will become acquainted and discuss the expectations, structure, practices, and ways of being that will get them the most out of the next 8 weeks. Self-Love swag bags will be handed out!
+        </p>
       </div>
-      <div>
-        <p><strong>Time:</strong></p>
-        <p class="event-detail-item">{{ event.start_time }} - {{ event.end_time }} PST</p>
+      <div class="col-md-4 session text-center">
+        <h2>
+          Session 2 &amp; 3:<br/> Foundational Self-Love
+        </h2>
+        <p>
+          Circle members will be introduced to the three keys to weave a standard of self-love into their lives.
+          The first: real self-care is the result of self-love.
+          Second: Treat loving yourself as if you were loving another.
+          Finally: your deepest love for you comes when you’ve learned to trust yourself.
+          These three concepts will be the building blocks for transforming your self-care practices.
+        </p>
       </div>
-      <div>
-        <p><strong>Location:</strong></p>
-        <p class="event-detail-item"><a href="https://www.google.com/maps/place/{{ event.location | format_location }}"
-            target="_blank">{{ event.location }} <i class="fa fa-globe" aria-hidden="true"></i></a></p>
+      <div class="col-md-4 session text-center">
+        <h2>
+          Session 4 &amp; 5:<br/> Transforming Beliefs
+        </h2>
+        <p>
+          You will learn to understand the common limiting beliefs associated with surviving negative experiences (including racism, sexism, childhood dysfunction).
+          Then get clear about the origin of your limiting beliefs and how to begin the process of revising them.
+          You’ll then walk through the process of releasing the energy and pain of the past and step more fully into your future lighter.
+        </p>
       </div>
-
-    </article>
-    <div class="text-center top-20">
-      <p>Contact me at <a href="mailto:kyeisha@kyeishahodge.com?subject=Group therapy inquiry for {{ event.start_date }}">kyeisha@kyeishahodge.com</a>
-        to enroll in this group.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 session text-center">
+        <h2>
+          Session 6 &amp; 7:<br/> Elevating Core Values
+        </h2>
+        <p>
+          Uncover your core values and learn to align your life with what you say is important.
+          Group members will identify their new elevated core value system and practice aligning their behaviors, and thoughts with these values.
+          These weeks will help you walk through your life with clarity, make better life decisions, and have more confidence in yourself.
+        </p>
+      </div>
+      <div class="col-md-4 session text-center">
+        <h2>
+          Session 8 &amp; 9:<br/> Blueprint for Empowered Living
+        </h2>
+        <p>
+          You will review what you have learned so far and will create and complete your "Blueprint for Empowerment Living" plan to help you stay focused and keep your transformation outside of the healing circle.
+          You will also participate in a small closing ceremony that celebrates your wins! 
+        </p>
+      </div>
+    </div>
+    <p>Homework will be given almost every week and is crucial</p>
+  </section>
+  <section class="full-width-img">
+    <img src="{% static 'imgs/adults-afro-attractive-1857583.jpg' %}">
+  </section>
+  <section class="container text-center" id="testimonials">
+    <h2>What Women Have Said about ROR Healing Circle</h2>
+    <div>
+      <p>
+        <img src="{% static 'imgs/left-quote.png' %}" class="quote left-quote"/>
+        I loved gathering with other black women in a safe and judgement-free space.
+        I looked forward to coming in every week and hearing us encourage and uplift each other.
+        It truly was an honor to share this experience with the other women of this group.
+        <img src="{% static 'imgs/right-quote.png' %}" class="quote right-quote"/>
+      </p>
+    </div>
+    <div>
+      <p>
+        <img src="{% static 'imgs/left-quote.png' %}" class="quote left-quote"/>
+        I was able to step out of the shadow and into my own light.
+        I have integrated self-love practices and positive self-talk that is shaping the way I see myself in a new way.
+        <img src="{% static 'imgs/right-quote.png' %}" class="quote right-quote"/>
+      </p>
+    </div>
+    <div>
+      <p>
+        <img src="{% static 'imgs/left-quote.png' %}" class="quote left-quote"/>
+        I wasn't quite sure what to expect when I signed up for this group, but what exceeded my expectations was the amount of thought and detail that obviously went into creating this.
+        From the gift bags, to the curriculum, and even our certificates;
+        everything that was provided was intentional, and eventually tailored to each and every one of us as the weeks went on.
+        It was apparent that Kyeisha was able to connect with us individually within this group setting, and I can say that I got more than I could ever imagine out of this group.
+        <img src="{% static 'imgs/right-quote.png' %}" class="quote right-quote"/>
+      </p>
+    </div>
+    <div>
+      <p>
+        <img src="{% static 'imgs/left-quote.png' %}" class="quote left-quote"/>
+        Do it!
+        Don't think twice.
+        This is the best investment I've made in myself in a long time, and I have learned so many valuable things that I continue to use daily.
+        <img src="{% static 'imgs/right-quote.png' %}" class="quote right-quote"/>
+      </p>
     </div>
   </section>
-  <section class="container">
-    <h3 class="text-center">
-      Financial Investment
-    </h3>
+  <section class="text-center" id="investment">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="heading">Financial Investment</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 option">
+          <h3>Option A</h3>
+          <div class="short-line"></div>
+          <p>
+            Early Bird<br/>
+            Paid-in-Full Rate
+          </p>
+          <div class="short-line"></div>
+          <h3>$675</h3>
+          <p class="pay-schedule">Due By Sep 2</p>
+        </div>
+        <div class="col-md-4 option">
+          <h3>Option B</h3>
+          <div class="short-line"></div>
+          <p>
+            Registration Paid<br />
+            in Two Installments
+          </p>
+          <div class="short-line"></div>
+          <h3>$725</h3>
+          <p class="pay-schedule">$362.50 Due By Sep 2</p>
+          <p class="pay-schedule">$362.50 Due By Sep 30</p>
+        </div>
+        <div class="col-md-4 option">
+          <h3>Option C</h3>
+          <div class="short-line"></div>
+          <p>
+            Registration Paid<br />
+            in Four Installments
+          </p>
+          <div class="short-line"></div>
+          <h3>$725</h3>
+          <p class="pay-schedule">$181.25 Due By Sep 2</p>
+          <p class="pay-schedule">$181.25 Due By Sep 30</p>
+          <p class="pay-schedule">$181.25 Due By Oct 14</p>
+          <p class="pay-schedule">$181.25 Due By Oct 31</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container text-center">
     <p>
-      Standard payment for a journey like this would be upwards of $1,560!
-      However, I am offering a huge discount so that you start your new year off right! 
-      Below is a detailed explanation of the financial investment:
+      To have your spot confirmed your initial deposit or paid in full payment would first be processed and then a registration form will be sent to you.
     </p>
-    <p>
-      <strong>Paid in Full:</strong> ${{ event.cost | lump_discount }} (${{ event.cost }} discount)
-    </p>
-    <p>
-      <strong>Pay in 3-Part Installments*:</strong> Each session is $79. Payment schedule will look like the following:
-      <ol>
-        <li>Initial deposit: ${% widthratio event.cost 1 2 %}</li>
-        <li>2nd payment: ${% widthratio event.cost 1 2 %}</li>
-        <li>3rd payment: ${% widthratio event.cost 1 4 %}</li>
-      </ol>
-    </p>
-    <p>
-      Dates for payment will be announced for each group. Payments will be processed here in my office using a credit/debit card of your choosing.
-    </p>
-    <p id="alternate-payment">
-      * Other payment options are available, please email me directly about this.
-    </p>
+  </section>
+  <section class="container text-center" id="payments">
+    <div class="row">
+      <div class="col-4" id="reserve">
+        <p>Reserve my spot in the upcoming ROR Healing Circle!</p>
+      </div>
+      <div class="col-4" id="arrow-box">
+        <img src="{% static 'imgs/right-arrow.png' %}" class="right-arrow" />
+      </div>
+      <div id="payment-form" class="col-4">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="VCLYWFK64NYB2">
+        <table>
+          <tr>
+            <td>
+              <input type="hidden" name="on0" value="Root of Restoration Client Registration">
+              <p>Root of Restoration Client Registration</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select name="os0">
+                <option value="Option A: Early Bird">Option A: Early Bird $675.00 USD</option>
+                <option value="Option B: Two Installments">Option B: Two Installments $362.50 USD</option>
+                <option value="Option C: Four Installments">Option C: Four Installments $181.25 USD</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" id="payment-btn">
+        <img alt="" border="0" id="hidden-pixel" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+      </div>
+    </div>
+  </section>
+  <section class="container text-center" id="group-details">
+    <div class="row">
+      <div class="col-12">
+        <p>Upcoming ROR</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p>Wednesdays</p>
+        <p>6:30 - 8 p.m. PST</p>
+      </div>
+      <div class="thin-line"></div>
+      <div class="col-6">
+        <p>Location:</p>
+        <p>600 North 65th St</p>
+        <p>Seattle, WA</p>
+      </div>
+    </div>
   </section>
 </div>
 {% endblock %}

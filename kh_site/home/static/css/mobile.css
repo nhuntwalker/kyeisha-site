@@ -237,43 +237,72 @@
     }
 
     /* Group Coaching */
-    #group-info-btn div {
-        width: 70vw;
-        max-width: 350px;
-        padding: 20px 10px;
+    h1#group-banner-text {
+        font-size: 20vw;
+        position: absolute;
+        top: 22%;
     }
-
-    /* .small-h1 {
-        font-size: 2.6em!important;
-    } */
-
-    #group-event-info {
-        margin-bottom: 20px;
+    h2.script, #group-description h2 {
+        font-size: 18vw!important;
     }
-    #group-event-info div {
-        margin-bottom: 15px;
+    #investment h2 {
+        font-size: 11vw!important;
     }
-    #group-event-info p {
+    #event-top h3,
+    #group-description h3 {
+        font-size: 10vw;
+    }
+    #question-list div {
+        width: 90%;
+    }
+    #session-descriptions {
+        width: 90vw;
+        min-width: 300px;
+    }
+    #session-descriptions .row {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    #session-descriptions .col-md-4 {
+        width: 90%;
+        margin: 20px 5% 20px;
+        display: inline-block;
+    }
+    #session-descriptions p {
+        min-height: 0;
+    }
+    #investment .option {
+        width: 80%;
+        margin: 5% 10%;
+        height: auto!important;
+    }
+    #arrow-box {
+        display: none!important;
+    }
+    #payments .col-4 {
+        width: 90%;
         display: block;
+        margin: auto;
     }
-
-    #group-event-detail ul {
+    #reserve {
+        margin-bottom: 40px!important;
+    }
+    #group-details {
+        width: auto;
+    }
+    #group-details .col-6 {
         width: 100%;
-        padding-left: 20px;
-        font-size: 1.15em;
+        border-left-width: 0px!important;
     }
-    #group-event-detail li {
-        margin: 10px 0;
-        font-size: 0.9em;
+    #group-details .row:first-child {
+        margin-bottom: 30px;
     }
-
-    .narrowed-text {
-        width: 100%;
-    }
-
-    .note {
-        font-size: 1.2em;
-        margin-top: 20px;
+    #group-details .thin-line {
+        width: 30%;
+        height: 1px;
+        background-color: #EE8E6D;
+        display: block;
+        margin: 15px auto;
     }
 
     /* Healing the Healers */
@@ -468,6 +497,8 @@
     .resource-inner p {
         margin-bottom: 5px;
     }
+
+    /*  */
 }
 
 @media screen and (min-width: 650px) {

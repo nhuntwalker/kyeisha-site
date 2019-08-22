@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^redactor/', include('redactor.urls')),
     url(r'^services/speaking/', include('speaking.urls')),
     url(r'^services/healers/', include('healers.urls')),
-    url(r'^services/groups/', include('group_coaching.urls')),
+    url(r'^services/healing-circle/', include('group_coaching.urls')),
     url(r'^services/resources/', include('resources.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
 ]

@@ -37,10 +37,11 @@ h4 {
 }
 
 p, ol li {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.25em;
     line-height: 1.5em;
     letter-spacing: 0.03em;
+    font-weight: 100;
 }
 .p-large {
     font-size: 1.4em;
@@ -789,14 +790,6 @@ span.mobile-item {
 }
 
 /* Counseling Page */
-.quote{
-    color: black;
-    font-family: 'Vesper Libre', serif;
-    padding-top: 20px;
-    font-style: italic;
-    font-size: 1.5em;
-}
-
 .top-quote {
     text-align: center;
     border: none;
@@ -1144,130 +1137,253 @@ span.mobile-item {
     height: 230px;
 }
 
-/* Group Coaching */
-#group-info-btn {
-    text-align: center;
+/* Roots of Restoration */
+h1#group-banner-text {
+    font-family: 'Julius Sans One';
+    font-size: 10em;
 }
-#group-info-btn {
-    text-decoration: none;
+h2.script,
+#group-description h2 {
+    font-family: 'Mr De Haviland';
+    font-size: 12em;
 }
-#group-info-btn div {
-    background-color: rgba(237, 142, 113, 0.55);
-    color: white;
-    font-weight: 700;
-    border: 10px solid #EC8E71;
-    width: 40%;
-    margin: auto;
-    padding: 20px 60px 20px;
-}
-#group-info-btn div:hover {
-    background-color: rgba(237, 142, 113, 1)
+#testimonials h2,
+#investment .heading {
+    font-family: 'Julius Sans One';
 }
 
-#group-info-btn p {
+#event-top h3,
+#group-description h3,
+#testimonials h3,
+#investment .option h3 {
+    font-family: 'Julius Sans One';
+    font-size: 6em;
+}
+#event-top h4 {
+    font-family: 'Julius Sans One';
+    font-size: 2em;
+    color: #EE8E6D;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#event-date-time {
+    font-family: 'Open Sans';
+    color: #8BCBC8;
+    border: thin solid #979797;
+    width: 300px;
+    margin: 20px auto 40px;
+    padding: 20px 0;
+    box-shadow: 2px 2px 5px #CCC;
+}
+#event-top p {
+    line-height: 2em;
+}
+#event-date-time p {
+    margin: 0;
+    line-height: 1.4em;
+    font-weight: 400;
+}
+.full-width-img img {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.blue-bkg {
+    background-color: #8BCBC8;
+}
+#question-list div {
+    padding: 15px;
+    border: 2px solid white;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 7px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+#question-list img.answer-yes {
+    width: 300px;
+    margin: 10px auto 40px;
+}
+#group-description h2,
+#group-description h3 {
+    color: #8BCBC8;
+}
+.call-out {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+#session-descriptions {
+    margin-bottom: 20px;
+    min-width: 1000px;
+    width: 90%;
+    padding: 0;
+}
+#session-descriptions .row {
+    margin-bottom: 40px;
+}
+#session-descriptions p {
+    text-align: center;
+}
+.session {
+    border: thin solid #EE8E6D;
+    padding: 0;
+    width: 30%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+.session h2 {
+    font-family: 'Julius Sans One';
+    font-size: 1.4em;
+    font-weight: 100;
+    line-height: 1.4em;
+}
+.session p {
+    line-height: 1.6em;
+    background-color: #F8F8F8;
+    padding: 15px;
+    margin-bottom: 0;
+    min-height: 360px;
+}
+
+#testimonials div {
+    box-shadow: 5px 5px 5px #CCC;
+    position: relative;
+    padding-left: 12px;
+}
+#testimonials p {
+    line-height: 2em;
+    padding: 15px;
+}
+#testimonials .quote {
+    width: 20px;
+}
+#testimonials .left-quote {
+    position: relative;
+    bottom: 7px;
+}
+#investment {
+    background-color: rgba(250, 250, 210, .75);
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+#investment .row {
+    margin-top: 30px;
+}
+#investment .option {
+    background-color: #EC8E71;
+    border: 10px solid #ffffff;
+    color: #ffffff;
+    font-weight: 700;
+    width: 30%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    text-align: center;
+    padding-bottom: 10px;
+    height: 400px;
+}
+#investment .option h3 {
+    color: #ffffff;
+    font-family: 'Open Sans';
+    font-size: 3em;
+}
+#investment .option p {
+    font-family: 'Julius Sans One';
+}
+#investment .pay-schedule {
+    margin-bottom: 5px;
+}
+.short-line {
+    background-color: #ffffff;
+    height: 1px;
+    width: 20%;
+    margin: 15px auto;
+}
+#reserve {
+    background-color: #8BCBC8;
+    color: #ffffff;
+    padding: 30px;
+    font-size: 1.2em;
+}
+#reserve p {
+    font-weight: 700;
+    font-family: 'Open Sans';
     margin-bottom: 0;
 }
 
-#group-event-info p {
-    margin-bottom: 0px;
-    text-align: center;
+#payments {
+    margin-bottom: 40px;
 }
-
-.listing {
-    margin-bottom: 20px;
-    list-style-type: disc;
+#payments .row {
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border: 2px solid #8BCBC8;
+    padding: 20px 0;
+    display: inline-block;
 }
-.listing ul,
-#group-logistics ul {
-    list-style-type: disc;
+#payments .col-4 {
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle;
 }
-.listing li,
-#group-logistics li {
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.5em;
-    letter-spacing: 0.03em;
+#payments #arrow-box {
+    width: 25%;
 }
-
-#group-logistics li {
-    font-size: 1.25em;
-}
-#group-logistics p {
-    font-size: 1em;
-}
-
-.join-btn {
-    text-align: center;
-}
-.join-btn:hover {
-    text-decoration: none;
-}
-.join-btn button {
-    background-color: rgba(237, 142, 113, 0.55);
-    color: white;
-    font-weight: 700;
-    border: 10px solid #EC8E71;
+#payment-form table {
+    width: 300px;
     margin: auto;
-    padding: 20px 60px 20px;
-    border-radius: 0px;
+    font-family: 'Open Sans';
 }
-.join-btn button:hover {
-    background-color: rgba(237, 142, 113, 1)
+#payment-form form {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+#payment-form p {
+    font-weight: 600;
+    letter-spacing: 0px;
+    font-size: 1.1em;
+}
+#payment-btn {
+    width: 45%;
+    margin: 15px auto 0;
+}
+.right-arrow {
+    width: 180px;
+}
+#hidden-pixel {
+    height: 1px;
+    weight: 1px;
 }
 
-#group-event-info {
-    border: thin solid #54F2CE;
-    padding: 20px;
-}
-
-#group-event-info div {
-    text-align: center;
-}
-#group-event-info p{
-    display: inline;
-}
-
-#group-event-detail ul {
-    list-style-type: disc;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.25em;
+#group-details {
+    border: thin solid #EC8E71;
+    padding: 30px;
+    width: 600px;
     margin: auto;
-}
-.narrowed-text {
-    width: 70%;
-    margin: auto;
-}
-#group-event-detail li {
-    margin: 20px 10px;
-}
-.note {
-    font-size: 1.3em;
     color: #EC8E71;
 }
-.group-coach-subhead {
-    text-decoration: underline;
-    font-size: 1.4em;
+#group-details p {
+    font-family: 'Open Sans';
+    font-size: 1.6em;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
-#session-outline {
-    /* width: 70%; */
-    margin: auto;
+#group-details .col-6 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 47%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-#session-outline div {
-    margin: 30px auto;
+#group-details .col-6:nth-child(2) {
+    border-left: 1px solid #EC8E71;
 }
-#session-outline>div:last-child {
-    margin-bottom: 20px;
-}
-#session-outline.listing li {
-    font-size: 1.25em;
-    margin-bottom: 10px;
-}
-
-#cost.listing li {
-    font-size: 1.25em;
-    margin-bottom: 10px;
-}
-#alternate-payment {
-    font-size: 0.75em;
+#group-details .thin-line {
+    display: none;
 }
 
 /* Loading Overlay */
