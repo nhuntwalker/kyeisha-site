@@ -1356,7 +1356,7 @@ h2.script,
 }
 #hidden-pixel {
     height: 1px;
-    weight: 1px;
+    width: 1px;
 }
 
 #group-details {

@@ -276,13 +276,20 @@
         margin: 5% 10%;
         height: auto!important;
     }
+
     #arrow-box {
         display: none!important;
+    }
+    #payments .row {
+        width: 100%;
     }
     #payments .col-4 {
         width: 90%;
         display: block;
         margin: auto;
+    }
+    #payments select {
+        font-weight: 400;
     }
     #reserve {
         margin-bottom: 40px!important;
