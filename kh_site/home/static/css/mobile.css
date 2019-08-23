@@ -263,7 +263,8 @@
         margin-bottom: 0;
         margin-top: 0;
     }
-    #session-descriptions .col-md-4 {
+    #session-descriptions .col-md-4,
+    #session-descriptions .col-md-3 {
         width: 90%;
         margin: 20px 5% 20px;
         display: inline-block;
@@ -273,6 +274,9 @@
     }
     #session-descriptions .second-row {
         transform: translateX(0%);
+    }
+    #session-descriptions .no-mobile {
+        display: none;
     }
 
     #investment .option {
