@@ -1229,7 +1229,6 @@ h2.script,
     text-align: center;
 }
 #session-descriptions .second-row {
-    transform: translateX(17%);
 }
 
 .session {
@@ -1276,7 +1275,7 @@ h2.script,
 }
 
 #investment .row {
-    margin-top: 30px;
+    margin: 30px 0 0;
 }
 #investment .option {
     background-color: #EC8E71;
@@ -1384,7 +1383,7 @@ h2.script,
     padding-left: 5%;
     padding-right: 5%;
 }
-#group-details .col-6:nth-child(2) {
+#left-border {
     border-left: 1px solid #EC8E71;
 }
 #group-details .thin-line {
