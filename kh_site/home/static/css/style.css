@@ -1228,10 +1228,11 @@ h2.script,
 #session-descriptions p {
     text-align: center;
 }
-#session-descriptions .second-row {
+#session-descriptions .col-md-3 {
+    width: calc(33%/2);
 }
 
-.session {
+#session-descriptions .session {
     border: thin solid #EE8E6D;
     padding: 0;
     width: 30%;
