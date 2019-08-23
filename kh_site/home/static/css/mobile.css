@@ -298,6 +298,7 @@
     }
     #payments select {
         font-weight: 400;
+        font-size: 0.86em
     }
     #reserve {
         margin-bottom: 40px!important;
