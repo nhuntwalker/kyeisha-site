@@ -1158,6 +1158,7 @@ h2.script,
 #investment .option h3 {
     font-family: 'Julius Sans One';
     font-size: 6em;
+    letter-spacing: -2px;
 }
 #event-top h4 {
     font-family: 'Julius Sans One';
@@ -1227,6 +1228,10 @@ h2.script,
 #session-descriptions p {
     text-align: center;
 }
+#session-descriptions .second-row {
+    transform: translateX(17%);
+}
+
 .session {
     border: thin solid #EE8E6D;
     padding: 0;
