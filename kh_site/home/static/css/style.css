@@ -1160,6 +1160,9 @@ h2.script,
     font-size: 6em;
     letter-spacing: -2px;
 }
+#event-top h3 {
+    margin-top: 0px;
+}
 #event-top h4 {
     font-family: 'Julius Sans One';
     font-size: 2em;
@@ -1172,7 +1175,7 @@ h2.script,
     color: #8BCBC8;
     border: thin solid #979797;
     width: 300px;
-    margin: 20px auto 40px;
+    margin: 20px auto 20px;
     padding: 20px 0;
     box-shadow: 2px 2px 5px #CCC;
 }
@@ -1307,11 +1310,20 @@ h2.script,
     width: 20%;
     margin: 15px auto;
 }
+#to-reserve {
+    margin-bottom: 20px;
+}
+#to-reserve p {
+    line-height: 1.7em;
+}
 #reserve {
     background-color: #8BCBC8;
     color: #ffffff;
     padding: 30px;
     font-size: 1.2em;
+}
+#to-reserve #reserve {
+    padding: 20px;
 }
 #reserve p {
     font-weight: 700;

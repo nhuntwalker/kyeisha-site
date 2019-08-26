@@ -303,6 +303,12 @@
     #reserve {
         margin-bottom: 40px!important;
     }
+    #to-reserve #reserve {
+        margin-bottom: 0px!important;
+    }
+    #to-reserve {
+        text-decoration: none;
+    }
     #group-details {
         width: auto;
     }
