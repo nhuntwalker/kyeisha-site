@@ -9,14 +9,14 @@ img {
 }
 
 h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 3.5em; 
     color: #EC8E71;
 }
 
 h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 3.1em;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 3.3em;
     color: #EC8E71;
 }
 h2.text-center,
@@ -25,13 +25,13 @@ h3.text-center {
 }
 
 h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 2.9em;
     color: #EC8E71;
 }
 
 h4 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 2.2em;
     margin-top: 20px;
 }
@@ -421,6 +421,20 @@ span.mobile-item {
 
 
 /*index page*/
+#welcome-text {
+    border: 2px solid #EE8E6D;
+    margin: 40px 10% 0;
+    width: 80%;
+    display: block;
+    padding: 20px;
+    font-size: 1.05em;
+}
+.space-20 {
+    height: 20px;
+    border-bottom: thin solid #EE8E6D;
+    width: 33%;
+    margin: 0 auto 25px;
+}
 .service-container {
     overflow: hidden;
     width: 47.5%;
