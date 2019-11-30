@@ -423,7 +423,7 @@ span.mobile-item {
 /*index page*/
 #welcome-text {
     border: 2px solid #EE8E6D;
-    margin: 40px 10% 0;
+    margin: 40px 10% 40px;
     width: 80%;
     display: block;
     padding: 20px;
