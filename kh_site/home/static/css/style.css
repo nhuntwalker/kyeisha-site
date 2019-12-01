@@ -423,11 +423,16 @@ span.mobile-item {
 /*index page*/
 #welcome-text {
     border: 2px solid #EE8E6D;
-    margin: 40px 10% 40px;
+    margin: 40px 0%;
     width: 80%;
     display: block;
     padding: 20px;
     font-size: 1.05em;
+}
+@media screen and (max-width: 1000px) {
+    #welcome-text {
+        margin: 40px 10%;
+    }
 }
 .space-20 {
     height: 10px;
